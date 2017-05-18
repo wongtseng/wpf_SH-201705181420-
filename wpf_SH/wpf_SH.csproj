@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4EC6C82-9968-4492-B591-72518DEBBC7B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>wpf_SH</RootNamespace>
+    <AssemblyName>wpf_SH</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MahApps.Metro">
+      <HintPath>..\..\Copy\AreaMonitor\Plugin\Wpf\Conris.Plugin.Wpf.DeviceMonitor\bin\Debug\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.Resources">
+      <HintPath>..\..\Copy\AreaMonitor\Plugin\Wpf\Conris.Plugin.Wpf.DeviceMonitor\bin\Debug\MahApps.Metro.Resources.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero2" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="addDevice.xaml.cs">
+      <DependentUpon>addDevice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="addlocal.xaml.cs">
+      <DependentUpon>addlocal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="addplace.xaml.cs">
+      <DependentUpon>addplace.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="addTask.xaml.cs">
+      <DependentUpon>addTask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="adduser.xaml.cs">
+      <DependentUpon>adduser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="alert.xaml.cs">
+      <DependentUpon>alert.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="choose.xaml.cs">
+      <DependentUpon>choose.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CommonTreeView.xaml.cs">
+      <DependentUpon>CommonTreeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_device.xaml.cs">
+      <DependentUpon>Page_device.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="page_device_all.xaml.cs">
+      <DependentUpon>page_device_all.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="page_local_all.xaml.cs">
+      <DependentUpon>page_local_all.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="page_place.xaml.cs">
+      <DependentUpon>page_place.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_plugin_Data.xaml.cs">
+      <DependentUpon>Page_plugin_Data.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Plugin_DataManage.xaml.cs">
+      <DependentUpon>Page_Plugin_DataManage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Plugin_OffLine.xaml.cs">
+      <DependentUpon>Page_Plugin_OffLine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Plugin_phy.xaml.cs">
+      <DependentUpon>Page_Plugin_phy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_plugin_task.xaml.cs">
+      <DependentUpon>Page_plugin_task.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Plugin_UCAssessment.xaml.cs">
+      <DependentUpon>Page_Plugin_UCAssessment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Plugin_Wire.xaml.cs">
+      <DependentUpon>Page_Plugin_Wire.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Plugin_wireless.xaml.cs">
+      <DependentUpon>Page_Plugin_wireless.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_temp.xaml.cs">
+      <DependentUpon>Page_temp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="sbjk.xaml.cs">
+      <DependentUpon>sbjk.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="page_local.xaml.cs">
+      <DependentUpon>page_local.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_task.xaml.cs">
+      <DependentUpon>Page_task.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="page_user.xaml.cs">
+      <DependentUpon>page_user.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="rwgh.xaml.cs">
+      <DependentUpon>rwgh.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="rwzx.xaml.cs">
+      <DependentUpon>rwzx.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings1.settings</DependentUpon>
+    </Compile>
+    <Compile Include="showtask.xaml.cs">
+      <DependentUpon>showtask.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="system.xaml.cs">
+      <DependentUpon>system.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UcMyRbtn.xaml.cs">
+      <DependentUpon>UcMyRbtn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC_choose.xaml.cs">
+      <DependentUpon>UC_choose.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="uc_device.xaml.cs">
+      <DependentUpon>uc_device.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="uc_pluginbtn.xaml.cs">
+      <DependentUpon>uc_pluginbtn.xaml</DependentUpon>
+    </Compile>
+    <Page Include="addDevice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="addlocal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="addplace.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="addTask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="adduser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="alert.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="choose.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CommonTreeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Page_device.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="page_device_all.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="page_local_all.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="page_place.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_plugin_Data.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_Plugin_DataManage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_Plugin_OffLine.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_Plugin_phy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_plugin_task.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_Plugin_UCAssessment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_Plugin_Wire.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_Plugin_wireless.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_temp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="sbjk.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="page_local.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_task.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="page_user.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="rwgh.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="rwzx.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="showtask.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Simple Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="style.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="system.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UcMyRbtn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC_choose.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="uc_device.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="uc_pluginbtn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="Design\projectGuides.guides" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Settings1.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\applications.png" />
+    <Resource Include="images\dashboard.png" />
+    <Resource Include="images\preferences.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\shield-warning-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\hourglass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\笔记本.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\设备.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\服务器.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="datesource.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\tab.png" />
+    <Resource Include="images\tab_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\任务执行.png" />
+    <Resource Include="images\任务规划.png" />
+    <Resource Include="images\设备监控.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\数据录入.png" />
+    <Resource Include="images\数据管理.png" />
+    <Resource Include="images\有线检查.png" />
+    <Resource Include="images\物理检查.png" />
+    <Resource Include="images\离线分析.png" />
+    <Resource Include="images\系统管理.png" />
+    <Resource Include="images\综合评估.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\无线检查.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\plugins.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

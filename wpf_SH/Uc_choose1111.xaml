@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="wpf_SH.Uc_choose"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:wpf_SH"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" Width="300">
+    <UserControl.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#181818"/>
+            <Setter Property="Foreground" Value="#999999"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+
+        <Style TargetType="Label">
+          
+            <Setter Property="Foreground" Value="#999999"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+
+
+
+
+    </UserControl.Resources>
+    
+    
+    <Grid Background="#2d2c31">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="23*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="120*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel  Height="120.001" VerticalAlignment="Center"  Grid.Column="1"  Grid.Row="1">
+            <Button Height="20" Margin="5" Content="&lt;&lt;&lt;" Name="Btn_add" Click=""></Button>
+            <Button Height="20"  Margin="5" Content=">>>" Name="Btn_del"></Button>
+            <Button Height="20"  Margin="5" Content="↑" Name="Btn_Up"></Button>
+            <Button Height="20"  Margin="5"  Content="↓" Name="Btn_Down"></Button>
+        </StackPanel>
+        <ListBox  Name="ListR"  Grid.Column="2" Grid.Row="1" Margin="0,0,5,5" Background="#252527"  Foreground="#ffffff" >
+            <ListBoxItem Content="丁科"/>
+            <ListBoxItem Content="包爱华"/>
+            <ListBoxItem Content="文爱"/>
+            <ListBoxItem Content="王真"/>
+            <ListBoxItem Content="王真"/>
+            <ListBoxItem Content="王真"/>
+            <ListBoxItem Content="王真"/>
+        </ListBox>
+        <ListBox  Name="ListL"  Grid.Column="0"  Grid.Row="1" Margin="5,0,0,5" Background="#252527"  Foreground="#ffffff">
+
+        </ListBox>
+        <Label Grid.Column="0"  Content="操作人员" HorizontalAlignment="Center" Name="TitleL"></Label>
+        <Label Grid.Column="2"  Content="可选人员" HorizontalAlignment="Center" Name="TitleR"></Label>
+    </Grid>
+</UserControl>

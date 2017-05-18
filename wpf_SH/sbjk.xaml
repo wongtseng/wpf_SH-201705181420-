@@ -1,0 +1,30 @@
+﻿<Page x:Class="wpf_SH.page_device"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:wpf_SH"
+      xmlns:MetroControls="http://metro.mahapps.com/winfx/xaml/controls"
+      mc:Ignorable="d"
+      d:DesignHeight="750"
+      d:DesignWidth="1280" 
+      Title="page_device"
+      Background="#2d2c31" 
+      >
+    <MetroControls:MetroContentControl>
+        <Grid  Margin="10,10,0,10" Background="#2d2c31">
+            <DockPanel Name="main"   Background="#2d2c31" >
+                <StackPanel Background="#2d2c31"   Width="10"  DockPanel.Dock="Right" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Image  Source="images/tab.png" Height="50" Width="10" DockPanel.Dock="Right" Mouse.PreviewMouseDown="Image_PreviewMouseDown"></Image>
+                </StackPanel>
+                <StackPanel  Name="right" Background="#252447" Width="150"  DockPanel.Dock="Right" ></StackPanel>
+                <StackPanel Background="#252527"   DockPanel.Dock="Right"></StackPanel>
+          
+
+            </DockPanel>
+            
+        </Grid>
+
+
+    </MetroControls:MetroContentControl>
+</Page>

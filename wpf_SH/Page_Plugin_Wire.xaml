@@ -1,0 +1,27 @@
+﻿<Page x:Class="wpf_SH.Page_Plugin_Wire"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:wpf_SH"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="900"
+        Background="#2d2c31"
+      Title="Page_Plugin_Wire">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="565*"/>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="#3f3f47" BorderThickness="1,1,1,1"  Grid.Row="0">
+            <StackPanel  Orientation="Horizontal" Grid.Row="1"  >
+                <local:uc_pluginbtn  Width="100" x:Name="UC_Plugins1"   p_type="电力线"  Margin="5"  Mouse.PreviewMouseDown="Btn_PreviewMouseDown"></local:uc_pluginbtn>
+                <local:uc_pluginbtn  Width="100"  x:Name="UC_Plugins2"   p_type="闭路电视"  Margin="5"  Mouse.PreviewMouseDown="Btn_PreviewMouseDown"></local:uc_pluginbtn>
+                <local:uc_pluginbtn  Width="100"  x:Name="UC_Plugins3"   p_type="线缆分析"  Margin="5"  Mouse.PreviewMouseDown="Btn_PreviewMouseDown"></local:uc_pluginbtn>
+                <local:uc_pluginbtn  Width="100"  x:Name="UC_Plugins4"   p_type="线缆分析_结果呈现"  Margin="5"  Mouse.PreviewMouseDown="Btn_PreviewMouseDown"></local:uc_pluginbtn>
+            </StackPanel>
+        </Border>
+        <ContentControl Grid.Row="2" x:Name="MyContentControl" Loaded="Window_Loaded" Background="#2d2c31" />
+    </Grid>
+</Page>

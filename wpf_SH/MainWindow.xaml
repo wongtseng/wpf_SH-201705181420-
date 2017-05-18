@@ -1,0 +1,52 @@
+﻿<Window x:Class="wpf_SH.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf_SH"
+        mc:Ignorable="d"
+        Title="系统" Height="600" Width="960"
+         Background="#2d2c31" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowState="Maximized"
+         
+       >
+    <Window.Resources>
+        <ResourceDictionary Source="style.xaml"></ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28"/>
+            <RowDefinition Height="2"/>
+            <RowDefinition Height="Auto"/>
+
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label Content="便携式反窃密检查系统-原型系统v0.2"></Label>
+        <Button   Grid.Row="0"  Content="X" HorizontalAlignment="Right"   VerticalAlignment="Center" Margin="0,4,5,4"  Width="23" Click="Button_Click" Height="20"  />
+        <Button Content="-" HorizontalAlignment="Right" Margin="0,4,30,4" VerticalAlignment="Center" Width="23" RenderTransformOrigin="-0.978,0.605"  Click="Button_Click_1" Height="20"/>
+        <Border BorderBrush="#3f3f47" BorderThickness="1,1,1,1"  Grid.Row="2">
+
+
+            <StackPanel  Orientation="Horizontal" Grid.Row="1"  >
+                <local:uc_pluginbtn   Width="100" x:Name="UCrwgh"   p_type="任务管理"  Margin="5"  Mouse.PreviewMouseDown="Btn_PreviewMouseDown"></local:uc_pluginbtn>
+                <local:uc_pluginbtn  Width="100"  x:Name="UCdata"   p_type="数据录入"  Margin="5"  Mouse.PreviewMouseDown="Btn_PreviewMouseDown"></local:uc_pluginbtn>
+                <local:uc_pluginbtn  Width="100"  x:Name="UCwireless"   p_type="无线检查"  Margin="5"  Mouse.PreviewMouseDown="Btn_PreviewMouseDown"></local:uc_pluginbtn>
+                <local:uc_pluginbtn  Width="100"  x:Name="UCwire"   p_type="有线检查"  Margin="5"  Mouse.PreviewMouseDown="Btn_PreviewMouseDown"></local:uc_pluginbtn>
+                <local:uc_pluginbtn  Width="100"  x:Name="UCphy"   p_type="物理检查"  Margin="5"  Mouse.PreviewMouseDown="Btn_PreviewMouseDown"></local:uc_pluginbtn>
+                <local:uc_pluginbtn  Width="100"  x:Name="UCAssessment"   p_type="综合评估"  Margin="5"  Mouse.PreviewMouseDown="Btn_PreviewMouseDown"></local:uc_pluginbtn>
+                <local:uc_pluginbtn  Width="100"  x:Name="UCoffline"   p_type="离线分析"  Margin="5"  Mouse.PreviewMouseDown="Btn_PreviewMouseDown"></local:uc_pluginbtn>
+                <local:uc_pluginbtn  Width="100"  x:Name="UCsbjk"   p_type="设备监控"  Margin="5"  Mouse.PreviewMouseDown="Btn_PreviewMouseDown"></local:uc_pluginbtn>
+                <local:uc_pluginbtn  Width="100"  x:Name="UCdatemanage"   p_type="数据管理"  Margin="5"  Mouse.PreviewMouseDown="Btn_PreviewMouseDown"></local:uc_pluginbtn>
+                <!--<local:uc_pluginbtn  Width="120"  x:Name="UCrwzx"   p_type="任务执行"  Margin="5"  Mouse.PreviewMouseDown="UCrwzx_PreviewMouseDown"></local:uc_pluginbtn>-->
+                <local:uc_pluginbtn  Width="100"  x:Name="UCsystem"   p_type="系统管理"  Margin="5"  Mouse.PreviewMouseDown="Btn_PreviewMouseDown"></local:uc_pluginbtn>
+            </StackPanel>
+        </Border>
+        <ContentControl Grid.Row="4" x:Name="MyContentControl" Loaded="Window_Loaded" Background="#2d2c31" />
+        <Label Name="lb_user" Content="目前登录用户：wongtseng" HorizontalAlignment="Right"  VerticalAlignment="Center" Margin="0,2,170,2"  Foreground="#ffffff" Height="24" Width="186" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+        <Label Content="注销" HorizontalAlignment="Right" Margin="0,2,122,2" VerticalAlignment="Center"  Foreground="#ffffff" Height="24" Width="34"  />
+    
+
+    </Grid>
+</Window>

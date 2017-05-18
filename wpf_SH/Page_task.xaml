@@ -1,0 +1,163 @@
+﻿<Page x:Class="wpf_SH.Page_task"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:wpf_SH"
+      xmlns:MetroControls="http://metro.mahapps.com/winfx/xaml/controls"
+      mc:Ignorable="d" 
+    d:DesignHeight="600" d:DesignWidth="1200"
+       Background="#1c1c1d"
+      Title="Page_task"
+     Loaded="Page_Loaded"
+      >
+
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#181818"/>
+            <Setter Property="Foreground" Value="#999999"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="#2d2c31"/>
+            <Setter Property="BorderBrush" Value="#666666"/>
+            <Setter Property="Foreground" Value="#999999"/>
+            <Setter Property="FontSize" Value="11"/>
+        </Style>
+    </Page.Resources>
+    <MetroControls:MetroContentControl>
+        <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13"/>
+            <ColumnDefinition Width="205"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="65"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="65"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBox Grid.Column="1"  Grid.ColumnSpan="1" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Center"  Background="#26252A" Height="15.97" Margin="0,2.015"/>
+        <Button  Content="搜索" Grid.Column="3" Grid.Row="1"  VerticalAlignment="Top" Height="19.24" />
+        <Button  Content="添加任务" Grid.Column="5" Grid.Row="1" VerticalAlignment="Top"  Click="Button_Click" Height="19.24"/>
+
+        <DataGrid Name="dg_user"  Grid.Column="1" Grid.ColumnSpan="5" Grid.Row="3"   Background="#222125" BorderBrush="#666666"  RowBackground="#1c1c1d" RowHeaderWidth="0" 
+                  HorizontalGridLinesBrush="#303037" VerticalGridLinesBrush="#303037" HorizontalContentAlignment="Center"   Loaded="dg_user_Loaded"  
+                  >
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Background" Value="#464749"/>
+                    <Setter Property="Foreground" Value="#ffffff"/>
+                    <Setter Property="FontSize" Value="12" />
+                    <Setter Property="Height" Value="20" />
+                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.Columns>
+                <!--<DataGridTextColumn Header="任务编号" />-->
+                <DataGridTemplateColumn Header="任务编号"  Width="50">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Label  Foreground="White">STT-1</Label>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+                <!--<DataGridTextColumn  Header="任务类型" Width="100"/>-->
+                <DataGridTemplateColumn Header="任务类型" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Label  Foreground="White">临检</Label>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+
+                <!--<DataGridTextColumn  Header="任务名称" Width="80"/>-->
+                <DataGridTemplateColumn Header="任务名称" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Label  Foreground="White">场所安全检查任务</Label>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+
+                <!--<DataGridTextColumn Header="检查内容" Width="*"/>-->
+                <DataGridTemplateColumn Header="检查内容"  Width="333">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Label  Foreground="White">频谱分析、伪基站检查、可见光检查</Label>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <!--<DataGridTextColumn Header="执行人员" Width="*"/>-->
+                <DataGridTemplateColumn Header="执行人员"  Width="150">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Label  Foreground="White">季昌海</Label>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <!--<DataGridTextColumn Header="检查场所" Width="*"/>-->
+                <DataGridTemplateColumn Header="检查场所"  Width="100">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Label  Foreground="White">部门会议室</Label>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+                <!--<DataGridTextColumn Header="启动时间" Width="*"/>-->
+                <DataGridTemplateColumn Header="启动时间"  Width="100*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Label  Foreground="White">2017/5/5 12：00</Label>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <!--<DataGridTextColumn Header="结束时间" Width="*"/>-->
+                <DataGridTemplateColumn Header="结束时间" Width="100*" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Label  Foreground="White">2017/5/5 12：30</Label>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+                <DataGridTemplateColumn Header="操作"  Width="170">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Button  Content="编辑" Width="40"  Background="#303033" Click="Button_Click"/>
+                                <Button  Content="查看详情" Width="60"  Background="#303033" Click="Button_Click_1"/>
+                                <Button  Content="启动任务" Width="60"  Background="#303033" Click="Button_Click_2" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+            <ListBoxItem/>
+            <ListBoxItem/>
+            <ListBoxItem/>
+            <ListBoxItem/>
+            <ListBoxItem/>
+            <ListBoxItem/>
+            <ListBoxItem/>
+        </DataGrid>
+    </Grid>
+        </MetroControls:MetroContentControl>
+</Page>

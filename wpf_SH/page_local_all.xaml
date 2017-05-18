@@ -1,0 +1,52 @@
+﻿<Page x:Class="wpf_SH.page_local_all"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:wpf_SH"
+      mc:Ignorable="d" 
+        Background="#3f3f47"
+      Title="page_local_all">
+
+    <Page.Resources>
+        <Style TargetType="{x:Type TabItem}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TabItem}">
+                        <Grid >
+                            <Border Name="Border" Background="#2279d6"  CornerRadius="6,0,0,6" Height="20">
+                                <ContentPresenter x:Name="ContentSite" VerticalAlignment="Center" HorizontalAlignment="Center" ContentSource="Header" Margin="12,2,12,2" />
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="#2279d6" />
+                                <Setter Property="TabItem.Foreground" Value="#ffffff"/>
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="False">
+                                <Setter TargetName="Border" Property="Background" Value="#3f3f47" />
+                                <Setter Property="TabItem.Foreground" Value="#7d7b80"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#333237"/>
+            <Setter Property="Foreground" Value="#999999"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+    </Page.Resources>
+    <Grid >
+        <TabControl TabStripPlacement="Left" Margin="0,5,0,0" BorderThickness="0,0,0,0"  BorderBrush="#2279d6" Padding="0,0,0,0"  >
+            <TabItem Header="地点管理" Background="Black"   Height="20" >
+                <Frame Source="page_place.xaml" Background="#252527" Margin="0,0,0,0"  />
+            </TabItem>
+            <TabItem Header="场所管理"  >
+                <Frame Source="page_local.xaml" Background="#252527" />
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Page>

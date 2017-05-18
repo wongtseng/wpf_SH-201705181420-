@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<userInfo>
+  <user >
+    <No>1</No>
+    <name>祁同伟</name>
+    <rule>普通用户</rule>
+    <context>18061666425</context>
+    <remark>备注</remark>
+  </user>
+  <user >
+    <No>2</No>
+    <name>高育良</name>
+    <rule>管理员</rule>
+    <context>18061666425</context>
+    <remark>备注</remark>
+  </user>
+</userInfo>

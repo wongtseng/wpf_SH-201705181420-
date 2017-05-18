@@ -1,0 +1,127 @@
+﻿<Page x:Class="wpf_SH.rwzx"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:wpf_SH"
+      xmlns:MetroControls="http://metro.mahapps.com/winfx/xaml/controls"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="900"
+      Title="rwzx"
+      Background="#2d2c31"
+      >
+
+    <Page.Resources>
+        <XmlDataProvider x:Key="userinfo" Source="datesource.xml" XPath="userInfo/user"/>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#181818"/>
+            <Setter Property="Foreground" Value="#999999"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="#222125"/>
+            <Setter Property="BorderBrush" Value="#666666"/>
+            <Setter Property="Foreground" Value="#ffffff"/>
+            <Setter Property="FontSize" Value="11"/>
+        </Style>
+    </Page.Resources>
+    <MetroControls:MetroContentControl>
+        <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10.5"/>
+            <ColumnDefinition Width="57.5"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="65"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="249*"/>
+            <RowDefinition Height="14"/>
+            <RowDefinition Height="285*"/>
+            <RowDefinition Height="22*"/>
+        </Grid.RowDefinitions>
+
+
+        <DataGrid Name="dg_user"  Grid.Column="1" Grid.ColumnSpan="6" Grid.Row="3"   Background="#222125" BorderBrush="#666666"  RowBackground="#1c1c1d" RowHeaderWidth="0" 
+                  HorizontalGridLinesBrush="#666666" VerticalGridLinesBrush="#666666" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Grid.RowSpan="1"    
+                  >
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Background" Value="#464749"/>
+                    <Setter Property="Foreground" Value="#ffffff"/>
+                    <Setter Property="FontSize" Value="12" />
+                    <Setter Property="Height" Value="20" />
+                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="序号" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Label  Foreground="White">1</Label>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="检查手段" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Label  Foreground="White">可见光检查</Label>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="执行人" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Label  Foreground="White">柯蓝</Label>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="执行状态" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Label  Foreground="White">已完成</Label>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="开始时间" Width="150">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Label  Foreground="White">2017/05/09 12：20</Label>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="上报时间" Width="150">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Label  Foreground="White">2017/05/09 13：35</Label>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn Header="执行结果"  Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Label  Foreground="White">已完成检查，并上传数据</Label>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+            <Label></Label>
+
+            <ListBoxItem/>
+            <ListBoxItem/>
+        </DataGrid>
+        <Button  Name="start" Grid.Row="1" Grid.Column="6" Content="启动任务" Click="Button_Click"></Button>
+        <TextBox   Grid.Column="1"  Grid.Row="5"   Grid.ColumnSpan="6"  
+                   Text=
+                   "[2017/5/9 12：33：30 ] X光检查已完成  &#x000A;[2017/5/9 12：33：30 ] 可见光光检查已完成  &#x000A;[2017/5/10 13：33：30 ] 频谱检查已完成  &#x000A; " Grid.RowSpan="1"  />
+    </Grid>
+        </MetroControls:MetroContentControl>
+</Page>
