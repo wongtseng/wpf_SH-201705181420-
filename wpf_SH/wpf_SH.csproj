@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>wpf_SH</RootNamespace>
     <AssemblyName>wpf_SH</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -47,9 +47,17 @@
     <Reference Include="MahApps.Metro.Resources">
       <HintPath>..\..\Copy\AreaMonitor\Plugin\Wpf\Conris.Plugin.Wpf.DeviceMonitor\bin\Debug\MahApps.Metro.Resources.dll</HintPath>
     </Reference>
+    <Reference Include="Mitov.BasicLab, Version=7.6.0.0, Culture=neutral, PublicKeyToken=54b8a1f38c94221a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WindowsFormsControlLibrary\bin\Debug\Mitov.BasicLab.dll</HintPath>
+    </Reference>
+    <Reference Include="Mitov.PlotLab, Version=7.6.0.0, Culture=neutral, PublicKeyToken=dbd38d31b0aeb8c3, processorArchitecture=MSIL" />
+    <Reference Include="Mitov.PlotLabBasic, Version=7.6.0.0, Culture=neutral, PublicKeyToken=1bb0b8a97236ac2e, processorArchitecture=MSIL" />
+    <Reference Include="Mitov.SignalLabBasic, Version=7.6.0.0, Culture=neutral, PublicKeyToken=0b44e28582c522cf, processorArchitecture=MSIL" />
     <Reference Include="PresentationFramework.Aero2" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -62,6 +70,10 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsControlLibrary">
+      <HintPath>..\WindowsFormsControlLibrary\bin\Debug\WindowsFormsControlLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -92,11 +104,23 @@
     <Compile Include="CommonTreeView.xaml.cs">
       <DependentUpon>CommonTreeView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Page1.xaml.cs">
+      <DependentUpon>Page1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Audio_Recall.xaml.cs">
+      <DependentUpon>Page_Audio_Recall.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Data_Recall.xaml.cs">
+      <DependentUpon>Page_Data_Recall.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Page_device.xaml.cs">
       <DependentUpon>Page_device.xaml</DependentUpon>
     </Compile>
     <Compile Include="page_device_all.xaml.cs">
       <DependentUpon>page_device_all.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Image_recall.xaml.cs">
+      <DependentUpon>Page_Image_recall.xaml</DependentUpon>
     </Compile>
     <Compile Include="page_local_all.xaml.cs">
       <DependentUpon>page_local_all.xaml</DependentUpon>
@@ -110,11 +134,17 @@
     <Compile Include="Page_Plugin_DataManage.xaml.cs">
       <DependentUpon>Page_Plugin_DataManage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Page_Plugin_DataRecall.xaml.cs">
+      <DependentUpon>Page_Plugin_DataRecall.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Page_Plugin_OffLine.xaml.cs">
       <DependentUpon>Page_Plugin_OffLine.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page_Plugin_phy.xaml.cs">
       <DependentUpon>Page_Plugin_phy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Plugin_SignalAnal.xaml.cs">
+      <DependentUpon>Page_Plugin_SignalAnal.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page_plugin_task.xaml.cs">
       <DependentUpon>Page_plugin_task.xaml</DependentUpon>
@@ -128,8 +158,20 @@
     <Compile Include="Page_Plugin_wireless.xaml.cs">
       <DependentUpon>Page_Plugin_wireless.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Page_SignalAnal.xaml.cs">
+      <DependentUpon>Page_SignalAnal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_SignRecall.xaml.cs">
+      <DependentUpon>Page_SignRecall.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Sign_Recall.xaml.cs">
+      <DependentUpon>Page_Sign_Recall.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Page_temp.xaml.cs">
       <DependentUpon>Page_temp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page_Video_recall.xaml.cs">
+      <DependentUpon>Page_Video_recall.xaml</DependentUpon>
     </Compile>
     <Compile Include="sbjk.xaml.cs">
       <DependentUpon>sbjk.xaml</DependentUpon>
@@ -223,11 +265,27 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_Audio_Recall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_Data_Recall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Page_device.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="page_device_all.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_Image_recall.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -247,11 +305,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Page_Plugin_DataRecall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Page_Plugin_OffLine.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Page_Plugin_phy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_Plugin_SignalAnal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -271,7 +337,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Page_SignalAnal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_SignRecall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_Sign_Recall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Page_temp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Page_Video_recall.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -410,6 +492,22 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\plugins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyPlot\MyPlot.csproj">
+      <Project>{28c07c3a-8b11-41ae-97a7-2461f7dde5ad}</Project>
+      <Name>MyPlot</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\office1.jpeg" />
+    <Resource Include="images\office2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\wmv.wmv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="images\xz.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

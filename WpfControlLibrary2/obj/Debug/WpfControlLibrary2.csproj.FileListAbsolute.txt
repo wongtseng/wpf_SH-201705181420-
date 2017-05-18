@@ -30,3 +30,9 @@ C:\Users\wangzhen\Desktop\wpf_SH[20170516]\WpfControlLibrary2\obj\Debug\WpfContr
 C:\Users\wangzhen\Desktop\wpf_SH[20170516]\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.csproj.GenerateResource.Cache
 C:\Users\wangzhen\Desktop\wpf_SH[20170516]\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.dll
 C:\Users\wangzhen\Desktop\wpf_SH[20170516]\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.pdb
+C:\Users\wangzhen\Desktop\wpf_SH[201705181420]\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.csprojResolveAssemblyReference.cache
+C:\Users\wangzhen\Desktop\wpf_SH[201705181420]\WpfControlLibrary2\obj\Debug\UserControl1.g.cs
+C:\Users\wangzhen\Desktop\wpf_SH[201705181420]\WpfControlLibrary2\obj\Debug\WpfControlLibrary2_MarkupCompile.cache
+C:\Users\wangzhen\Desktop\wpf_SH[201705181420]\WpfControlLibrary2\obj\Debug\WpfControlLibrary2_MarkupCompile.lref
+C:\Users\wangzhen\Desktop\wpf_SH[201705181420]\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.dll
+C:\Users\wangzhen\Desktop\wpf_SH[201705181420]\WpfControlLibrary2\obj\Debug\WpfControlLibrary2.pdb

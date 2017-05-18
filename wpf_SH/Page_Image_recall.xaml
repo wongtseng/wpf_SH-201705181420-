@@ -1,0 +1,56 @@
+﻿<Page x:Class="wpf_SH.Page_Image_recall"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:wpf_SH"
+      mc:Ignorable="d" 
+       xmlns:plotlab="clr-namespace:Mitov.PlotLab;assembly=Mitov.PlotLabBasic"
+      Background="#262626"
+    d:DesignHeight="600" d:DesignWidth="900"
+      Title="Page_Image_recall">
+
+    <Grid>
+        <Border  Background="#2d2d2d"   Grid.RowSpan="2" BorderBrush="#666666" BorderThickness="1" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Border Name="LU" Background="#2e2e2e">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <CheckBox VerticalAlignment="Center"  Content="迹线"  Foreground="White"></CheckBox>
+                        <CheckBox VerticalAlignment="Center"  Content="图例"  Foreground="White"></CheckBox>
+                        <CheckBox VerticalAlignment="Center"  Content="灰度"  Foreground="White"></CheckBox>
+
+                    </StackPanel>
+
+                </Border>
+                <Border  Grid.Row="1" Margin="5" Name="LD" Background="#1c1c1c" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="50"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0"   Width="400" Source="images/office1.jpeg"/>
+                        <Image Grid.Row="1"  Width="400" Source="images/office2.jpeg"/>
+                       
+                        <StackPanel Grid.Row="2"  Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Button Width="50" Margin="5" Content="&lt;&lt;&lt;"></Button>
+                            <Button Width="50" Margin="5" Content=">>>"></Button>
+                        </StackPanel>
+                    
+                    </Grid>
+
+
+
+
+
+
+                </Border>
+            </Grid>
+        </Border>
+
+    </Grid>
+</Page>

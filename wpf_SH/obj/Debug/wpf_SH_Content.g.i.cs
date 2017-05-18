@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/plugins.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/wmv.wmv")]
 
 

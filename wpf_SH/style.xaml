@@ -179,4 +179,51 @@
     <!-- SimpleStyles: ComboBoxItem -->
 
 
+    <XmlDataProvider x:Key="DataSample_DataManage">
+        <x:XData>
+            <Data xmlns="">
+                <data >
+                    <ID>1</ID>
+                    <D1>主机1</D1>
+                    <D2>192.168.0.2</D2>
+                    <D3>101</D3>
+                    <D4>122</D4>
+                    <D5>44.5</D5>
+                    <D6>DAT</D6>
+                    <D7>2017年5月1日</D7>
+                </data>
+                <data >
+                    <ID>2</ID>
+                    <D1>主机2</D1>
+                    <D2>192.168.0.6</D2>
+                    <D3>123</D3>
+                    <D4>178</D4>
+                    <D5>44</D5>
+                    <D6>DAT</D6>
+                    <D7>2017年5月2日</D7>
+                </data>
+                <data>
+                    <ID>3</ID>
+                    <D1>主机3</D1>
+                    <D2>192.168.0.8</D2>
+                    <D3>34</D3>
+                    <D4>99</D4>
+                    <D5>44</D5> >
+                    <D6>DAT</D6>
+                    <D7>2017年5月5日</D7>
+                </data>
+                <data >
+                    <ID>4</ID>
+                    <D1>主机4</D1>
+                    <D2>192.168.0.11</D2>
+                    <D3>666</D3>
+                    <D4>7777</D4>
+                    <D5>44</D5>
+                    <D6>DAT</D6>
+                    <D7>2017年5月12日</D7>
+                </data>
+            </Data>
+        </x:XData>
+    </XmlDataProvider>
+
 </ResourceDictionary>

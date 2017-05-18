@@ -22,6 +22,11 @@ namespace wpf_SH
     {
         Page_task page_rwgh;
         rwzx page_rwzx;
+        Page_Plugin_DataRecall plugin_DataRecall;
+        Page_SignRecall singrecall;
+        Page_Plugin_SignalAnal psinal;
+     
+
         uc_pluginbtn[] plugins;
 
         public Page_Plugin_OffLine()
@@ -47,27 +52,27 @@ namespace wpf_SH
 
             switch (thisone.p_type)
             {
-                case "电力线":
-                    if (page_rwgh == null)
+                case "数据回溯":
+                    if (singrecall == null)
                     {
-                        page_rwgh = new Page_task();
+                        singrecall = new  Page_SignRecall();
                     }
 
                     MyContentControl.Content = new Frame()
                     {
-                        Content = page_rwgh
+                        Content = singrecall
 
                     };
                     break;
 
-                case "闭路电视":
-                    if (page_rwzx == null)
+                case "信号分析":
+                    if (psinal == null)
                     {
-                        page_rwzx = new rwzx();
+                        psinal = new  Page_Plugin_SignalAnal();
                     }
                     MyContentControl.Content = new Frame()
                     {
-                        Content = page_rwzx
+                        Content = psinal
 
                     };
                     break;

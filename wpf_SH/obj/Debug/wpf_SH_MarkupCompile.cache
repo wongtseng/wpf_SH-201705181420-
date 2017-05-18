@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\wangzhen\Desktop\wpf_SH[20170518]\wpf_SH\obj\Debug\
+C:\Users\wangzhen\Desktop\wpf_SH[201705181420]\wpf_SH\obj\Debug\
 wpf_SH
 none
 false
 DEBUG;TRACE
-C:\Users\wangzhen\Desktop\wpf_SH[20170518]\wpf_SH\App.xaml
-37-492462250
-
-401649249764
-161416862741
-addDevice.xaml;addlocal.xaml;addplace.xaml;addTask.xaml;adduser.xaml;alert.xaml;choose.xaml;CommonTreeView.xaml;Login.xaml;MainWindow.xaml;Page_device.xaml;page_device_all.xaml;page_local_all.xaml;page_place.xaml;Page_plugin_Data.xaml;Page_Plugin_DataManage.xaml;Page_Plugin_OffLine.xaml;Page_Plugin_phy.xaml;Page_plugin_task.xaml;Page_Plugin_UCAssessment.xaml;Page_Plugin_Wire.xaml;Page_Plugin_wireless.xaml;Page_temp.xaml;sbjk.xaml;page_local.xaml;Page_task.xaml;page_user.xaml;rwgh.xaml;rwzx.xaml;showtask.xaml;Simple Styles.xaml;style.xaml;system.xaml;UcMyRbtn.xaml;UC_choose.xaml;uc_device.xaml;uc_pluginbtn.xaml;
+C:\Users\wangzhen\Desktop\wpf_SH[201705181420]\wpf_SH\App.xaml
+47-1831779085
+1632706258
+50-1057831528
+24353313390
+addDevice.xaml;addlocal.xaml;addplace.xaml;addTask.xaml;adduser.xaml;alert.xaml;choose.xaml;CommonTreeView.xaml;Login.xaml;MainWindow.xaml;Page1.xaml;Page_Audio_Recall.xaml;Page_Data_Recall.xaml;Page_device.xaml;page_device_all.xaml;Page_Image_recall.xaml;page_local_all.xaml;page_place.xaml;Page_plugin_Data.xaml;Page_Plugin_DataManage.xaml;Page_Plugin_DataRecall.xaml;Page_Plugin_OffLine.xaml;Page_Plugin_phy.xaml;Page_Plugin_SignalAnal.xaml;Page_plugin_task.xaml;Page_Plugin_UCAssessment.xaml;Page_Plugin_Wire.xaml;Page_Plugin_wireless.xaml;Page_SignalAnal.xaml;Page_SignRecall.xaml;Page_Sign_Recall.xaml;Page_temp.xaml;Page_Video_recall.xaml;sbjk.xaml;page_local.xaml;Page_task.xaml;page_user.xaml;rwgh.xaml;rwzx.xaml;showtask.xaml;Simple Styles.xaml;style.xaml;system.xaml;UcMyRbtn.xaml;UC_choose.xaml;uc_device.xaml;uc_pluginbtn.xaml;
 
 False
 

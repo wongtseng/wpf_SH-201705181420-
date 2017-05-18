@@ -12,6 +12,7 @@
 
     <Page.Resources>
         <ResourceDictionary Source="style.xaml"></ResourceDictionary>
+    
     </Page.Resources>
     <MetroControls:MetroContentControl>
         <Grid>
@@ -43,6 +44,7 @@
                                 <RowDefinition Height="25"></RowDefinition>
                                 <RowDefinition Height="25"></RowDefinition>
                                 <RowDefinition Height="25"></RowDefinition>
+                                <RowDefinition Height="25"></RowDefinition>
                                 <RowDefinition Height="*"></RowDefinition>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
@@ -61,10 +63,10 @@
                             <ComboBox  Grid.Row="1" Grid.Column="1" Height="20" Margin="0,0,5,0"></ComboBox>
                             <DatePicker Grid.Row="2"  Grid.Column="1" Height="20" Margin="0,0,5,0" FontSize="11"></DatePicker>
                             <DatePicker Grid.Row="3"  Grid.Column="1" Height="20" Margin="0,0,5,0"  FontSize="11"></DatePicker>
-                            <TextBox Grid.Row="4"  Grid.Column="1" Height="20" Margin="0,0,5,0"> </TextBox>
+                            <TextBox Grid.Row="4"  Grid.Column="1" Height="20" Margin="0,0,5,0"></TextBox>
                             <TextBox Grid.Row="5"  Grid.Column="1" Height="20" Margin="0,0,5,0"></TextBox>
+                            <Button Grid.Row="6" Content="查询" Grid.Column="1" Margin="0,0,5,0" Width="60" HorizontalAlignment="Right"></Button>
                         </Grid>
-                        
                     </Border>
                 </Grid>
             </Border>
@@ -73,9 +75,38 @@
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="25"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
                     </Grid.RowDefinitions>
                     <Border Background="#2279d6">
-                        <Label  Foreground="White">频谱数据管理</Label>
+                        <Label  Foreground="White"  Grid.Row="0" >频谱数据管理</Label>
+                    </Border>
+                    <Border Grid.Row="1" Margin="5">
+                        <DataGrid Name="dg_user" Grid.ColumnSpan="6" Grid.Column="1" Grid.Row="3"   Background="#222125" BorderBrush="#666666"  RowBackground="#1c1c1d" RowHeaderWidth="0" 
+                  HorizontalGridLinesBrush="#303037" VerticalGridLinesBrush="#303037" HorizontalContentAlignment="Center" HorizontalAlignment="Center"  
+                ItemsSource="{Binding Source={StaticResource DataSample_DataManage},XPath=/Data/data}"
+ AutoGenerateColumns="False"
+                  >
+                            <DataGrid.ColumnHeaderStyle>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="Background" Value="#464749"/>
+                                    <Setter Property="Foreground" Value="#ffffff"/>
+                                    <Setter Property="FontSize" Value="12" />
+                                    <Setter Property="Height" Value="20" />
+                                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                </Style>
+                            </DataGrid.ColumnHeaderStyle>
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="序号"  Width="50" Foreground="White" Binding="{Binding Mode=OneWay,  XPath=ID}"/>
+                                <DataGridTextColumn Header="主机名称" Width="70"  Foreground="White"  Binding="{Binding Mode=OneWay,  XPath=D1}"/>
+                                <DataGridTextColumn Header="主机IP" Width="150" Foreground="White"  Binding="{Binding Mode=OneWay,  XPath=D2}"/>
+                                <DataGridTextColumn  Header="起始频率" Width="70" Foreground="White"  Binding="{Binding Mode=OneWay,  XPath=D3}"/>
+                                <DataGridTextColumn  Header="终止频率" Width="70" Foreground="White"  Binding="{Binding Mode=OneWay,  XPath=D4}"/>
+                                <DataGridTextColumn Header="采样率" Width="Auto"  Foreground="White"  Binding="{Binding Mode=OneWay,  XPath=D5}"/>
+                                <DataGridTextColumn Header="文件类型" Width="70"   Foreground="White" Binding="{Binding Mode=OneWay,  XPath=D6}"/>
+                                <DataGridTextColumn Header="记录时间" Width="*"  Foreground="White"  Binding="{Binding Mode=OneWay,  XPath=D7}"/>    
+
+                            </DataGrid.Columns>
+                        </DataGrid>
                     </Border>
                 </Grid>
             </Border>

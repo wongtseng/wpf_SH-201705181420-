@@ -1,0 +1,58 @@
+﻿<Page x:Class="wpf_SH.Page_Video_recall"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:wpf_SH"
+      mc:Ignorable="d" 
+      Background="#262626"
+    d:DesignHeight="600" d:DesignWidth="900"
+      Title="Page_Video_recall">
+
+    <Grid>
+        <Border  Background="#2d2d2d"   Grid.RowSpan="2" BorderBrush="#666666" BorderThickness="1" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Border Name="LU" Background="#2e2e2e">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <!--<CheckBox VerticalAlignment="Center"  Content="迹线"  Foreground="White"></CheckBox>
+                        <CheckBox VerticalAlignment="Center"  Content="图例"  Foreground="White"></CheckBox>
+                        <CheckBox VerticalAlignment="Center"  Content="灰度"  Foreground="White"></CheckBox>-->
+
+                    </StackPanel>
+
+                </Border>
+                <Border  Grid.Row="1" Margin="5" Name="LD" Background="#1c1c1c" >
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="40"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <MediaElement    Name="Myvideo" Grid.Row="0" Grid.RowSpan="2" Source="images/wmv.wmv"    LoadedBehavior="Manual"   Loaded="Myvideo_Loaded"/>
+
+
+
+                        <StackPanel  Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Button Content="play" Width="30" Margin="5" Click="Button_Click"></Button>
+                            <Button Content="stop" Width="30"  Margin="5" Click="Button_Click_1"></Button>
+                            <Slider  Grid.Row="2" Value="4" VerticalAlignment="Center" Width="400"></Slider>
+                        </StackPanel>
+
+                    </Grid>
+
+
+
+
+
+
+                </Border>
+            </Grid>
+        </Border>
+
+    </Grid>
+</Page>

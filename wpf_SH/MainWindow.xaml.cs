@@ -37,6 +37,7 @@ namespace wpf_SH
         Page_Plugin_UCAssessment plugin_Assessment;
         Page_Plugin_OffLine plugin_offLine;
         Page_Plugin_DataManage plugin_Datamanage;
+        Page_Plugin_DataRecall plugin_DataRecall;
 
         string name;
 
