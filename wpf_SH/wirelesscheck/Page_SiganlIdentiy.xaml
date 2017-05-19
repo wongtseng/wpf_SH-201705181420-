@@ -1,0 +1,204 @@
+﻿<Page x:Class="wpf_SH.wirelesscheck.Page_SiganlIdentiy"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:wpf_SH.wirelesscheck"
+      xmlns:v="clr-namespace:MyPlot;assembly=MyPlot"
+      xmlns:local11="clr-namespace:wpf_SH.DataRecall"
+      xmlns:local1="clr-namespace:wpf_SH"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="900"
+          Background="#262626"
+      Title="Page_SiganlIdentiy">
+
+    <Page.Resources>
+        <ResourceDictionary Source="../style.xaml"></ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  Width="51*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="30"/>
+        </Grid.ColumnDefinitions>
+
+
+
+        <Border x:Name="MyBorderR"   Width="250" Background="#2d2d2d" Grid.Column="1" Grid.RowSpan="2"  BorderBrush="#666666"   BorderThickness="1" Margin="5,5,2,5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Border Background="#2279d6" x:Name="title" Grid.Row="0">
+                    <Label  Foreground="White">信号识别</Label>
+                </Border>
+                <Border Grid.Row="1" >
+                    <Grid Width="250">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"></RowDefinition>
+                            <RowDefinition Height="25"></RowDefinition>
+                            <RowDefinition Height="25"></RowDefinition>
+                            <RowDefinition Height="25"></RowDefinition>
+                            <RowDefinition Height="25"></RowDefinition>
+                            <RowDefinition Height="25"></RowDefinition>
+                            <RowDefinition Height="25"></RowDefinition>
+                            <RowDefinition Height="25"></RowDefinition>
+                            <RowDefinition Height="100*"></RowDefinition>
+                            <RowDefinition Height="30"></RowDefinition>
+
+
+                            <RowDefinition Height="30"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60"></ColumnDefinition>
+                            <ColumnDefinition Width="30*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Label  Content="数据文件" Grid.Column="0"   Grid.Row="0" HorizontalAlignment="Right"></Label>
+                        <Label  Content="设备类型" Grid.Column="0"   Grid.Row="1" HorizontalAlignment="Right"></Label>
+                        <Label  Content="检查对象" Grid.Column="0"     Grid.Row="2" HorizontalAlignment="Right"></Label>
+                        <Label  Content="检查人"     Grid.Column="0"   Grid.Row="3" HorizontalAlignment="Right"></Label>
+                 
+                        <Label  Content="起始频率"     Grid.Column="0"   Grid.Row="4" HorizontalAlignment="Right"></Label>
+                        <Label  Content="终止频率"     Grid.Column="0"   Grid.Row="5" HorizontalAlignment="Right"></Label>
+                        <Label  Content="采样率"     Grid.Column="0"   Grid.Row="6" HorizontalAlignment="Right"></Label>
+                        <Label  Content="图片备注"     Grid.Column="0"   Grid.Row="7" HorizontalAlignment="Right"></Label>
+
+                        <ComboBox  Grid.Row="0" Grid.Column="1" Height="20" Margin="0,0,5,0"></ComboBox>
+                        <ComboBox  Grid.Row="4" Grid.Column="1" Height="20" Margin="0,0,5,0"></ComboBox>
+                        <TextBox Grid.Row="1" Grid.Column="1" Height="20" Margin="0,0,5,0"></TextBox>
+                        <TextBox Grid.Row="2"  Grid.Column="1" Height="20" Margin="0,0,5,0"></TextBox>
+                        <TextBox Grid.Row="3"  Grid.Column="1" Height="20" Margin="0,0,5,0"></TextBox>
+                        <TextBox Grid.Row="4"  Grid.Column="1" Height="20" Margin="0,0,5,0"></TextBox>
+                        <TextBox Grid.Row="5"  Grid.Column="1" Height="20" Margin="0,0,5,0"></TextBox>
+                        <TextBox Grid.Row="6"  Grid.Column="1" Height="20" Margin="0,0,5,0"></TextBox>
+                        <TextBox Grid.Row="7"  Grid.Column="1" Height="20" Margin="0,0,5,0"></TextBox>
+                        <TextBox Name="picmessage"   Grid.Row="8"      Grid.Column="0"  Grid.ColumnSpan="2"  Text="备注信息" Margin="0,0,5,0" ></TextBox>
+                        <StackPanel Grid.Row="9"  Grid.Column="0" Grid.ColumnSpan="2" Margin="0,5,0,0" Orientation="Horizontal" HorizontalAlignment="Center" Height="25">
+                            <Button Content="结果上报"  Width="80" DockPanel.Dock="Left" Margin="0,0,82,0"></Button>
+                            <Button  Content="分析" Width="80" Margin="0,0,4,0"/>
+
+                        </StackPanel>
+
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+
+        <Border  Background="#2d2d2d"   BorderBrush="#666666"  Margin="5" BorderThickness="1" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="103*"/>
+                    <RowDefinition Height="160"/>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0"></Border>
+                <Border Grid.Row="1">
+                    <Grid Background="#2e2e2e">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50*"/>
+                            <RowDefinition Height="50*"/>
+                            <RowDefinition Height="50*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50*"/>
+                            <ColumnDefinition Width="50*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <WindowsFormsHost   Margin="5"  Grid.Row="1"   Grid.Column="0"    >
+                            <v:uc_Scope Name="scope1"/>
+                        </WindowsFormsHost>
+                        <WindowsFormsHost Margin="5" x:Name="Host"  Grid.Row="0"   Grid.Column="0"  >
+
+                            <v:uc_waterfall Name="waterfall2"/>
+                        </WindowsFormsHost>
+                        <WindowsFormsHost    Margin="5" Grid.Row="2"   Grid.Column="0"    >
+                            <v:uc_Scope Name="scope2"/>
+                        </WindowsFormsHost>
+
+
+
+                        <Border Grid.Row="0" Grid.Column="1" Background="Black" Margin="5">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50*"/>
+                                    <RowDefinition Height="30"/>
+
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50*"/>
+                                    <ColumnDefinition Width="50*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Image Grid.Row="0" Source="..\images/xz.png" Margin="10"></Image>
+                                <Image Grid.Row="0" Grid.Column="1" Source="..\images/xz.png"  Margin="10"></Image>
+                                <Label  Grid.Row="1" VerticalAlignment="Center"  Foreground="White" HorizontalAlignment="Center" FontSize="14">绝对星座图</Label>
+                                <Label  Grid.Row="1"  Grid.Column="1" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14">查分星座图</Label>
+                            </Grid>
+
+
+                        </Border>
+                        <Border Grid.Row="1" Grid.Column="1" Background="Black" Margin="5">
+                            <Label VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14">眼图</Label>
+                        </Border>
+
+                        <Border Grid.Row="2" Grid.Column="1" Background="Black" Margin="5" >
+
+                        </Border>
+
+
+                    </Grid>
+
+
+
+                </Border>
+                <Border Grid.Row="4">
+                    <DataGrid Name="dg_user" Grid.ColumnSpan="6" Grid.Column="1" Grid.Row="3"   Background="#222125" BorderBrush="#666666"  RowBackground="#1c1c1d" RowHeaderWidth="0" 
+                  HorizontalGridLinesBrush="#303037" VerticalGridLinesBrush="#303037" HorizontalContentAlignment="Center"  
+             
+ AutoGenerateColumns="False"
+                  >
+                        <DataGrid.ColumnHeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Background" Value="#464749"/>
+                                <Setter Property="Foreground" Value="#ffffff"/>
+                                <Setter Property="FontSize" Value="12" />
+                                <Setter Property="Height" Value="25" />
+                                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                            </Style>
+                        </DataGrid.ColumnHeaderStyle>
+                        <DataGrid.Columns >
+                            <DataGridTextColumn Header="序号"  Width="30*" Foreground="White" Binding="{Binding Mode=OneWay,  XPath=ID}" />
+                            <DataGridTextColumn Header="中心频率" Width="70*"  Foreground="White"  Binding="{Binding Mode=OneWay,  XPath=D1}"/>
+                            <DataGridTextColumn Header="带宽" Width="70*" Foreground="White"  Binding="{Binding Mode=OneWay,  XPath=D2}"/>
+                            <DataGridTextColumn  Header="信噪比" Width="80*" Foreground="White"  Binding="{Binding Mode=OneWay,  XPath=D3}"/>
+                            <DataGridTextColumn  Header="调制方式" Width="90*" Foreground="White"  Binding="{Binding Mode=OneWay,  XPath=D4}"/>
+                            <DataGridTextColumn Header="调制速率" Width="Auto"  Foreground="White"  Binding="{Binding Mode=OneWay,  XPath=D5}"/>
+                            <DataGridTextColumn Header="通信体制" Width="70*"   Foreground="White" Binding="{Binding Mode=OneWay,  XPath=D6}"/>
+               
+                        </DataGrid.Columns>
+                        <ListBoxItem/>
+                        <ListBoxItem/>
+                        <ListBoxItem/>
+                        <ListBoxItem/>
+                        <ListBoxItem/>
+                        <ListBoxItem/>
+                        <ListBoxItem/>
+                    </DataGrid>
+
+                </Border>
+            </Grid>
+        </Border>
+
+        <StackPanel  Grid.Column="2" Grid.RowSpan="2" >
+            <local1:UcMyRbtn x:Name="MyRadiobtn1" Margin="0,5,0,0"   Height="120" p_text="信号识别"    MouseDoubleClick="MyRadiobtn_MouseDoubleClick"      Mouse.PreviewMouseDown="MyRadiobtn_PreviewMouseDown" ></local1:UcMyRbtn>
+        </StackPanel>
+
+        <!--<Border Background="#2279d6"></Border>
+        <Border Background="#2279d6" Grid.Column="1"> </Border>-->
+
+
+
+    </Grid>
+</Page>

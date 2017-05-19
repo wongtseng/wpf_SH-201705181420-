@@ -2,7 +2,8 @@ C:\Users\wangzhen\Desktop\wpf_SH[201705181420]\MyPlot\bin\Debug\MyPlot.dll
 C:\Users\wangzhen\Desktop\wpf_SH[201705181420]\MyPlot\bin\Debug\MyPlot.pdb
 C:\Users\wangzhen\Desktop\wpf_SH[201705181420]\MyPlot\bin\Debug\Mitov.BasicLab.dll
 C:\Users\wangzhen\Desktop\wpf_SH[201705181420]\MyPlot\bin\Debug\Mitov.PlotLabBasic.dll
-C:\Users\wangzhen\Desktop\wpf_SH[201705181420]\MyPlot\obj\Debug\MyPlot.UserControl1.resources
+C:\Users\wangzhen\Desktop\wpf_SH[201705181420]\MyPlot\obj\Debug\MyPlot.uc_Scope.resources
+C:\Users\wangzhen\Desktop\wpf_SH[201705181420]\MyPlot\obj\Debug\MyPlot.uc_waterfall.resources
 C:\Users\wangzhen\Desktop\wpf_SH[201705181420]\MyPlot\obj\Debug\MyPlot.csproj.GenerateResource.Cache
 C:\Users\wangzhen\Desktop\wpf_SH[201705181420]\MyPlot\obj\Debug\MyPlot.dll
 C:\Users\wangzhen\Desktop\wpf_SH[201705181420]\MyPlot\obj\Debug\MyPlot.pdb

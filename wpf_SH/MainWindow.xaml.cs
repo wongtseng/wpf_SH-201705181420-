@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using wpf_SH.evaluate;
 
 namespace wpf_SH
 {
@@ -38,6 +28,7 @@ namespace wpf_SH
         Page_Plugin_OffLine plugin_offLine;
         Page_Plugin_DataManage plugin_Datamanage;
         Page_Plugin_DataRecall plugin_DataRecall;
+        Page_Eval_Master Eval_Master;
 
         string name;
 
@@ -59,9 +50,10 @@ namespace wpf_SH
 
         public MainWindow()
         {
-            InitializeComponent();
-              SplashScreen aa = new SplashScreen("images/hourglass.png");
+            SplashScreen aa = new SplashScreen("images/hourglass.png");
             aa.Show(true);
+            InitializeComponent();
+            
 
             plugins = new uc_pluginbtn[] { UCrwgh, UCdata, UCwireless, UCwire, UCphy, UCAssessment, UCoffline, UCsbjk, UCdatemanage, UCsystem };
 
@@ -180,14 +172,14 @@ namespace wpf_SH
 
                     break;
                     case "综合评估"://
-                    if (plugin_Assessment == null)
+                    if (Eval_Master == null)
                     {
-                        plugin_Assessment = new Page_Plugin_UCAssessment();
+                        Eval_Master = new  Page_Eval_Master();
 
                     }
                     MyContentControl.Content = new Frame()
                     {
-                        Content = plugin_Assessment
+                        Content = Eval_Master
                     };
                     break;
                     case "离线分析":

@@ -1,0 +1,57 @@
+﻿<Page x:Class="wpf_SH.Page_Audio_Recall"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+       xmlns:v="clr-namespace:MyPlot;assembly=MyPlot"
+      xmlns:local="clr-namespace:wpf_SH"
+      mc:Ignorable="d" 
+       xmlns:plotlab="clr-namespace:Mitov.PlotLab;assembly=Mitov.PlotLabBasic"
+      xmlns:local1="clr-namespace:wpf_SH.DataRecall"
+      Background="#262626"
+    d:DesignHeight="600" d:DesignWidth="900"
+      Title="Page_Audio_Recall">
+
+    <Grid>
+        <Border  Background="#2d2d2d"   Grid.RowSpan="2" BorderBrush="#666666" BorderThickness="1" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Border Name="LU" Background="#2e2e2e">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <CheckBox VerticalAlignment="Center"  Content="迹线"  Foreground="White"></CheckBox>
+                        <CheckBox VerticalAlignment="Center"  Content="图例"  Foreground="White"></CheckBox>
+                        <CheckBox VerticalAlignment="Center"  Content="灰度"  Foreground="White"></CheckBox>
+
+                    </StackPanel>
+
+                </Border>
+                <Border  Grid.Row="1" Margin="5" Name="LD" Background="#1c1c1c" >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="40"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <WindowsFormsHost x:Name="Host2"  Grid.Row="0"   Grid.Column="0"   Grid.RowSpan="2"  >
+                            <v:uc_Scope Name="scope1"/>
+                        </WindowsFormsHost>
+
+                        <!--<ProgressBar Height="17" DockPanel.Dock="Top" Value="20" Grid.Row="2"></ProgressBar>-->
+                        <local1:vidoecontrol  Grid.Row="2"  VerticalAlignment="Center"></local1:vidoecontrol>
+                        
+                    </Grid>
+
+
+
+
+
+
+                </Border>
+            </Grid>
+        </Border>
+
+    </Grid>
+</Page>

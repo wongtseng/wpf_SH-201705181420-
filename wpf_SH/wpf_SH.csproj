@@ -104,13 +104,25 @@
     <Compile Include="CommonTreeView.xaml.cs">
       <DependentUpon>CommonTreeView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataRecall\vidoecontrol.xaml.cs">
+      <DependentUpon>vidoecontrol.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="evaluate\Page_Eval.xaml.cs">
+      <DependentUpon>Page_Eval.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="evaluate\Page_Eval_Master.xaml.cs">
+      <DependentUpon>Page_Eval_Master.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="evaluate\Page_Report.xaml.cs">
+      <DependentUpon>Page_Report.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Page1.xaml.cs">
       <DependentUpon>Page1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page_Audio_Recall.xaml.cs">
+    <Compile Include="DataRecall\Page_Audio_Recall.xaml.cs">
       <DependentUpon>Page_Audio_Recall.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page_Data_Recall.xaml.cs">
+    <Compile Include="DataRecall\Page_Data_Recall.xaml.cs">
       <DependentUpon>Page_Data_Recall.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page_device.xaml.cs">
@@ -119,7 +131,7 @@
     <Compile Include="page_device_all.xaml.cs">
       <DependentUpon>page_device_all.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page_Image_recall.xaml.cs">
+    <Compile Include="DataRecall\Page_Image_recall.xaml.cs">
       <DependentUpon>Page_Image_recall.xaml</DependentUpon>
     </Compile>
     <Compile Include="page_local_all.xaml.cs">
@@ -134,17 +146,17 @@
     <Compile Include="Page_Plugin_DataManage.xaml.cs">
       <DependentUpon>Page_Plugin_DataManage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page_Plugin_DataRecall.xaml.cs">
+    <Compile Include="DataRecall\Page_Plugin_DataRecall.xaml.cs">
       <DependentUpon>Page_Plugin_DataRecall.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page_Plugin_OffLine.xaml.cs">
       <DependentUpon>Page_Plugin_OffLine.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DataRecall\Page_Plugin_SignalAnal.xaml.cs">
+      <DependentUpon>Page_Plugin_SignalAnal.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Page_Plugin_phy.xaml.cs">
       <DependentUpon>Page_Plugin_phy.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Page_Plugin_SignalAnal.xaml.cs">
-      <DependentUpon>Page_Plugin_SignalAnal.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page_plugin_task.xaml.cs">
       <DependentUpon>Page_plugin_task.xaml</DependentUpon>
@@ -158,20 +170,32 @@
     <Compile Include="Page_Plugin_wireless.xaml.cs">
       <DependentUpon>Page_Plugin_wireless.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page_SignalAnal.xaml.cs">
+    <Compile Include="DataRecall\Page_SignalAnal.xaml.cs">
       <DependentUpon>Page_SignalAnal.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page_SignRecall.xaml.cs">
-      <DependentUpon>Page_SignRecall.xaml</DependentUpon>
+    <Compile Include="DataRecall\Page_DataRecall_Master.xaml.cs">
+      <DependentUpon>Page_DataRecall_Master.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page_Sign_Recall.xaml.cs">
+    <Compile Include="DataRecall\Page_Sign_Recall.xaml.cs">
       <DependentUpon>Page_Sign_Recall.xaml</DependentUpon>
     </Compile>
     <Compile Include="Page_temp.xaml.cs">
       <DependentUpon>Page_temp.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Page_Video_recall.xaml.cs">
+    <Compile Include="DataRecall\Page_Video_recall.xaml.cs">
       <DependentUpon>Page_Video_recall.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="physicscheck\Page_CheckResultPhy.xaml.cs">
+      <DependentUpon>Page_CheckResultPhy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="physicscheck\Page_checkresulttable.xaml.cs">
+      <DependentUpon>Page_checkresulttable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="physicscheck\Page_ImageCheck.xaml.cs">
+      <DependentUpon>Page_ImageCheck.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="physicscheck\Page_physicschecknode.xaml.cs">
+      <DependentUpon>Page_physicschecknode.xaml</DependentUpon>
     </Compile>
     <Compile Include="sbjk.xaml.cs">
       <DependentUpon>sbjk.xaml</DependentUpon>
@@ -214,6 +238,24 @@
     <Compile Include="uc_pluginbtn.xaml.cs">
       <DependentUpon>uc_pluginbtn.xaml</DependentUpon>
     </Compile>
+    <Compile Include="wirelesscheck\Page_Freq_Check.xaml.cs">
+      <DependentUpon>Page_Freq_Check.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wirelesscheck\Page_SiganlIdentiy.xaml.cs">
+      <DependentUpon>Page_SiganlIdentiy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wirelesscheck\Page_SoundCheck.xaml.cs">
+      <DependentUpon>Page_SoundCheck.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wirelesscheck\Page_WirelessCheckResult.xaml.cs">
+      <DependentUpon>Page_WirelessCheckResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wirelesscheck\Page_Wirelessresulttable.xaml.cs">
+      <DependentUpon>Page_Wirelessresulttable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="wirelesscheck\Page_wirelessVideo.xaml.cs">
+      <DependentUpon>Page_wirelessVideo.xaml</DependentUpon>
+    </Compile>
     <Page Include="addDevice.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -246,6 +288,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="DataRecall\vidoecontrol.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="evaluate\Page_Eval.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="evaluate\Page_Eval_Master.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="evaluate\Page_Report.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -269,11 +327,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page_Audio_Recall.xaml">
+    <Page Include="DataRecall\Page_Audio_Recall.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page_Data_Recall.xaml">
+    <Page Include="DataRecall\Page_Data_Recall.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -285,7 +343,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page_Image_recall.xaml">
+    <Page Include="DataRecall\Page_Image_recall.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -305,7 +363,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page_Plugin_DataRecall.xaml">
+    <Page Include="DataRecall\Page_Plugin_DataRecall.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -313,13 +371,13 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page_Plugin_phy.xaml">
+    <Page Include="DataRecall\Page_Plugin_SignalAnal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page_Plugin_SignalAnal.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Page_Plugin_phy.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Page_plugin_task.xaml">
       <SubType>Designer</SubType>
@@ -337,15 +395,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page_SignalAnal.xaml">
+    <Page Include="DataRecall\Page_SignalAnal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page_SignRecall.xaml">
+    <Page Include="DataRecall\Page_DataRecall_Master.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page_Sign_Recall.xaml">
+    <Page Include="DataRecall\Page_Sign_Recall.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -353,7 +411,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Page_Video_recall.xaml">
+    <Page Include="DataRecall\Page_Video_recall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="physicscheck\Page_CheckResultPhy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="physicscheck\Page_checkresulttable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="physicscheck\Page_ImageCheck.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="physicscheck\Page_physicschecknode.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -410,6 +484,30 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="uc_pluginbtn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wirelesscheck\Page_Freq_Check.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wirelesscheck\Page_SiganlIdentiy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wirelesscheck\Page_SoundCheck.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wirelesscheck\Page_WirelessCheckResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wirelesscheck\Page_Wirelessresulttable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="wirelesscheck\Page_wirelessVideo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -504,10 +602,19 @@
     <Resource Include="images\office2.jpeg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="images\check.png" />
+    <Resource Include="images\error.png" />
+    <Resource Include="images\nn-next.png" />
+    <Resource Include="images\nn-pause.png" />
+    <Resource Include="images\nn-play.png" />
+    <Resource Include="images\nn-previous.png" />
+    <Resource Include="images\pic.png" />
     <Content Include="images\wmv.wmv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="images\word.png" />
     <Resource Include="images\xz.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

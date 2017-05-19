@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using wpf_SH.physicscheck;
+
 
 namespace wpf_SH
 {
@@ -20,9 +22,13 @@ namespace wpf_SH
     /// </summary>
     public partial class Page_Plugin_phy : Page
     {
-        Page_task page_rwgh;
-        rwzx page_rwzx;
+        
         uc_pluginbtn[] plugins;
+
+        Page_physicschecknode checknode;
+        Page_ImageCheck imagecheck;
+        Page_CheckResultPhy checkresult;
+
 
         public Page_Plugin_phy()
         {
@@ -47,54 +53,44 @@ namespace wpf_SH
 
             switch (thisone.p_type)
             {
-                case "电力线":
-                    if (page_rwgh == null)
+                case "非线性节点探测":
+                    if (checknode == null)
                     {
-                        page_rwgh = new Page_task();
+                        checknode = new Page_physicschecknode();
                     }
 
                     MyContentControl.Content = new Frame()
                     {
-                        Content = page_rwgh
+                        Content = checknode
 
                     };
                     break;
 
-                case "闭路电视":
-                    if (page_rwzx == null)
+                case "图形图像处理":
+                    if (imagecheck == null)
                     {
-                        page_rwzx = new rwzx();
+                        imagecheck = new  Page_ImageCheck();
                     }
                     MyContentControl.Content = new Frame()
                     {
-                        Content = page_rwzx
+                        Content = imagecheck
 
                     };
                     break;
 
-                case "线缆分析":
-                    if (page_rwzx == null)
+                case "物理分析_结果呈现":
+                    if (checkresult == null)
                     {
-                        page_rwzx = new rwzx();
+                        checkresult = new  Page_CheckResultPhy();
                     }
                     MyContentControl.Content = new Frame()
                     {
-                        Content = page_rwzx
+                        Content = checkresult
 
                     };
                     break;
 
-                case "缆分析_结果呈现":
-                    if (page_rwzx == null)
-                    {
-                        page_rwzx = new rwzx();
-                    }
-                    MyContentControl.Content = new Frame()
-                    {
-                        Content = page_rwzx
-
-                    };
-                    break;
+            
 
             }
 

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using wpf_SH.wirelesscheck;
 
 namespace wpf_SH
 {
@@ -23,11 +24,16 @@ namespace wpf_SH
         Page_task page_rwgh;
         rwzx page_rwzx;
         uc_pluginbtn[] plugins;
+        Page_Freq_Check FreqCheck;
+        Page_SiganlIdentiy signalidentiy;
+        Page_wirelessVideo wirelessvideo;
+        Page_SoundCheck soundcheck;
+        Page_WirelessCheckResult wirelesscheckresult;
 
         public Page_Plugin_wireless()
         {
             InitializeComponent();
-            InitializeComponent();
+          
             SplashScreen aa = new SplashScreen("images/hourglass.png");
             aa.Show(true);
 
@@ -48,62 +54,62 @@ namespace wpf_SH
             switch (thisone.p_type)
             {
                 case "频谱分析":
-                    if (page_rwgh == null)
+                    if (FreqCheck == null)
                     {
-                        page_rwgh = new Page_task();
+                        FreqCheck = new  Page_Freq_Check();
                     }
 
                     MyContentControl.Content = new Frame()
                     {
-                        Content = page_rwgh
+                        Content = FreqCheck
 
                     };
                     break;
 
                 case "信号识别":
-                    if (page_rwzx == null)
+                    if (signalidentiy == null)
                     {
-                        page_rwzx = new rwzx();
+                        signalidentiy = new  Page_SiganlIdentiy();
                     }
                     MyContentControl.Content = new Frame()
                     {
-                        Content = page_rwzx
+                        Content = signalidentiy
 
                     };
                     break;
 
                 case "无线视频":
-                    if (page_rwzx == null)
+                    if (wirelessvideo == null)
                     {
-                        page_rwzx = new rwzx();
+                        wirelessvideo = new  Page_wirelessVideo();
                     }
                     MyContentControl.Content = new Frame()
                     {
-                        Content = page_rwzx
+                        Content = wirelessvideo
 
                     };
                     break;
 
                 case "话音取证":
-                    if (page_rwzx == null)
+                    if (soundcheck == null)
                     {
-                        page_rwzx = new rwzx();
+                        soundcheck = new  Page_SoundCheck();
                     }
                     MyContentControl.Content = new Frame()
                     {
-                        Content = page_rwzx
+                        Content = soundcheck
 
                     };
                     break;
 
                 case "结果呈现":
-                    if (page_rwzx == null)
+                    if (wirelesscheckresult == null)
                     {
-                        page_rwzx = new rwzx();
+                        wirelesscheckresult = new  Page_WirelessCheckResult();
                     }
                     MyContentControl.Content = new Frame()
                     {
-                        Content = page_rwzx
+                        Content = wirelesscheckresult
 
                     };
                     break;

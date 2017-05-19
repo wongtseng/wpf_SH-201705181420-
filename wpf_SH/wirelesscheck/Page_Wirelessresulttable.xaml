@@ -1,0 +1,44 @@
+﻿<Page x:Class="wpf_SH.wirelesscheck.Page_Wirelessresulttable"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:wpf_SH.wirelesscheck"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="900"
+      Title="Page_Wirelessresulttable">
+
+    <Grid>
+        <DataGrid Name="dg_user" Grid.ColumnSpan="6" Grid.Row="3"  Grid.Column="1"  Background="#222125" BorderBrush="#666666"  RowBackground="#1c1c1d" RowHeaderWidth="0" 
+                  HorizontalGridLinesBrush="#303037" VerticalGridLinesBrush="#303037" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="1,0"  
+                  >
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Background" Value="#464749"/>
+                    <Setter Property="Foreground" Value="#ffffff"/>
+                    <Setter Property="FontSize" Value="12" />
+                    <Setter Property="Height" Value="20" />
+                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="序号" />
+                <DataGridTextColumn Header="首次发现时间" Width="100"/>
+                <DataGridTextColumn Header="末次发现时间" Width="100"/>
+                <DataGridTextColumn  Header="中心频率（Khz）" Width="100"/>
+                <DataGridTextColumn  Header="带宽（Khz）" Width="100"/>
+                <DataGridTextColumn  Header="幅度（dbm）" Width="100"/>
+                <DataGridTextColumn Header="载噪比" Width="*"/>
+                <DataGridTextColumn  Header="发现次数" Width="100"/>
+            </DataGrid.Columns>
+            <ListBoxItem/>
+            <ListBoxItem/>
+            <ListBoxItem/>
+            <ListBoxItem/>
+            <ListBoxItem/>
+            <ListBoxItem/>
+            <ListBoxItem/>
+        </DataGrid>
+
+    </Grid>
+</Page>

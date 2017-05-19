@@ -26,6 +26,8 @@
             <Setter Property="FontSize" Value="11"/>
         </Style>
     </Page.Resources>
+    
+    
     <MetroControls:MetroContentControl>
         <Grid>
         <Grid.ColumnDefinitions>
