@@ -30,14 +30,13 @@
                     <Grid >
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"></RowDefinition>
-                            <RowDefinition Height="*"></RowDefinition>
                             <RowDefinition Height="50"></RowDefinition>
                         </Grid.RowDefinitions>
-                        <Border Grid.Row="0" Grid.RowSpan="2" >
-                            <MediaElement    Name="Myvideo" Source="..\images/wmv.wmv"    LoadedBehavior="Manual"   Loaded="Myvideo_Loaded"/>
+                        <Border Grid.Row="0" >
+                            <Image Source="../images/TV.png"></Image>
                         </Border>
 
-                      
+
 
 
 

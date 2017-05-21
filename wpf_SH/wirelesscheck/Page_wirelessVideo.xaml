@@ -57,7 +57,7 @@
                         <Label  Content="设备类型" Grid.Column="0"   Grid.Row="1" HorizontalAlignment="Right"></Label>
                         <Label  Content="检查对象" Grid.Column="0"     Grid.Row="2" HorizontalAlignment="Right"></Label>
                         <Label  Content="检查人"     Grid.Column="0"   Grid.Row="3" HorizontalAlignment="Right"></Label>
-                        <Label  Content="图片备注"     Grid.Column="0"   Grid.Row="4" HorizontalAlignment="Right"></Label>
+                        <Label  Content="备注信息"     Grid.Column="0"   Grid.Row="4" HorizontalAlignment="Right"></Label>
 
                         <ComboBox  Grid.Row="0" Grid.Column="1" Height="20" Margin="0,0,5,0"></ComboBox>
                    

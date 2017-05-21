@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:wpf_SH"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="370" d:DesignWidth="370">
 
 
 
@@ -13,37 +13,60 @@
         <ResourceDictionary Source="style.xaml"></ResourceDictionary>
     </UserControl.Resources>
 
+    <Grid>
+        <Border Background="#2d2c31" >
+           
+            <GroupBox  BorderBrush="#666666" BorderThickness="2" Background="#222125" Style="{StaticResource GroupboxWithoutWhiteBorder}" Margin="5">
+               
+                <GroupBox.Header>
+                    <Label Name="ChooseType">指定执行人员</Label>
+                </GroupBox.Header>
 
-    <Grid Background="#2d2c31">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="23*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="120*"/>
-            <ColumnDefinition Width="50"/>
-            <ColumnDefinition Width="120*"/>
-        </Grid.ColumnDefinitions>
+                <Border>
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid Background="#222125" HorizontalAlignment="Center" Grid.Row="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="23*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="150"/>
+                            </Grid.ColumnDefinitions>
 
-        <StackPanel  Height="120.001" VerticalAlignment="Center"  Grid.Column="1"  Grid.Row="1">
-            <Button Height="20" Margin="5" Content="&lt;&lt;&lt;" Name="Btn_add"  Click="Btn_add_Click" ></Button>
-            <Button Height="20"  Margin="5" Content=">>>" Name="Btn_del" Click="Btn_remove_Click"></Button>
-            <Button Height="20"  Margin="5" Content="↑" Name="Btn_Up" Click="Btn_up_Click"></Button>
-            <Button Height="20"  Margin="5"  Content="↓" Name="Btn_Down" Click="Btn_down_Click"></Button>
-        </StackPanel>
-        <ListBox  Name="ListR"  Grid.Column="2" Grid.Row="1" Margin="0,0,5,5" Background="#252527"  Foreground="#ffffff" >
-            <ListBoxItem Content="丁科"/>
-            <ListBoxItem Content="包爱华"/>
-            <ListBoxItem Content="文爱"/>
-            <ListBoxItem Content="王真"/>
-            <ListBoxItem Content="王真"/>
-            <ListBoxItem Content="王真"/>
-            <ListBoxItem Content="王真"/>
-        </ListBox>
-        <ListBox  Name="ListL"  Grid.Column="0"  Grid.Row="1" Margin="5,0,0,5" Background="#252527"  Foreground="#ffffff">
-
-        </ListBox>
-        <Label Grid.Column="0"  Content="操作人员" HorizontalAlignment="Center" Name="TitleL" ></Label>
-        <Label Grid.Column="2"  Content="可选人员" HorizontalAlignment="Center" Name="TitleR"></Label>
+                            <StackPanel  Height="120.001" VerticalAlignment="Center"  Grid.Column="1"  Grid.Row="1">
+                                <Button Height="20" Margin="5" Content="&lt;&lt;&lt;" Name="Btn_add"  Click="Btn_add_Click" ></Button>
+                                <Button Height="20"  Margin="5" Content=">>>" Name="Btn_del" Click="Btn_remove_Click"></Button>
+                                <Button Height="20"  Margin="5" Content="↑" Name="Btn_Up" Click="Btn_up_Click"></Button>
+                                <Button Height="20"  Margin="5"  Content="↓" Name="Btn_Down" Click="Btn_down_Click"></Button>
+                            </StackPanel>
+                            <ListBox  Name="ListR"  Grid.Column="2" Grid.Row="1" Margin="0,0,5,5" Background="#252527"  Foreground="#ffffff" >
+                            </ListBox>
+                            <ListBox  Name="ListL"  Grid.Column="0"  Grid.Row="1" Margin="5,0,0,5" Background="#252527"  Foreground="#ffffff">
+                            </ListBox>
+                            <Label Grid.Column="0"  Content="操作人员" HorizontalAlignment="Center" Name="TitleL" ></Label>
+                            <Label Grid.Column="2"  Content="可选人员" HorizontalAlignment="Center" Name="TitleR"></Label>
+                        </Grid>
+                        <StackPanel   Name="SP" Orientation="Horizontal" HorizontalAlignment="Center" Visibility="Collapsed">
+                            <Label Name="LB_Type" Content=" 选择检查对象"></Label>
+                            <ComboBox Name="CB" Height="25"  Width="250">
+                                <ComboBoxItem    Content="办公楼3楼会议室" HorizontalAlignment="Center" Width="163" HorizontalContentAlignment="Center" />
+                                <ComboBoxItem   Content="办公电话" HorizontalAlignment="Center" Width="163" HorizontalContentAlignment="Center"/>
+                                <ComboBoxItem    Content="墙面装饰品" HorizontalAlignment="Center" Width="163" HorizontalContentAlignment="Center"/>
+                            </ComboBox>
+                        </StackPanel>
+                   
+                    </Grid>
+                </Border>
+               
+            </GroupBox>
+        </Border>
     </Grid>
+    
+   
 </UserControl>

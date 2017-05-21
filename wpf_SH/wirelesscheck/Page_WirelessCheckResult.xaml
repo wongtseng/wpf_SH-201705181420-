@@ -42,7 +42,7 @@
     <Grid >
         <TabControl Margin="0,0,0,0" BorderThickness="0,3,0,0"  BorderBrush="#2279d6" Padding="0,0,0,0"  TabStripPlacement="Top">
             <TabItem Header="结果汇总" Background="Black"   Height="20" >
-                <Frame Source="Page_Wirelessresulttable.xaml" Background="#252527" />
+                <Frame Source="Page_WirelessresulttableTotal.xaml" Background="#252527" />
             </TabItem>
             <TabItem Header="信号检测结果"  >
                 <Frame Source="Page_Wirelessresulttable.xaml" Background="#252527" />

@@ -12,7 +12,6 @@
 
     <Page.Resources>
         <ResourceDictionary Source="style.xaml"></ResourceDictionary>
-    
     </Page.Resources>
     <MetroControls:MetroContentControl>
         <Grid>

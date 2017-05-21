@@ -1,0 +1,190 @@
+﻿<Window x:Class="wpf_SH.Task.AddTask"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf_SH.Task"
+        xmlns:local1="clr-namespace:wpf_SH"
+        mc:Ignorable="d"
+    
+       
+        ShowInTaskbar="False" WindowStyle="None"
+        d:DesignHeight="600"  d:DesignWidth="900" ResizeMode="NoResize"
+         AllowsTransparency="True" Background="Transparent"
+        >
+
+    <Window.Resources>
+        <ResourceDictionary Source="../style.xaml"></ResourceDictionary>
+    </Window.Resources>
+   
+
+
+    <Grid>
+        <Border Name="allborder" Background="Transparent">
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="550"/>
+                    <ColumnDefinition Width="375"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.RowSpan="3"  BorderBrush="#2279d6"  BorderThickness="1" >
+                    <Grid Background="#2d2c31">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="400*"/>
+                            <RowDefinition Height="200*"/>
+                            <RowDefinition Height="40"/>
+                        </Grid.RowDefinitions>
+                        <GroupBox BorderBrush="#666666" BorderThickness="2" Background="#222125" Style="{StaticResource GroupboxWithoutWhiteBorder}" Margin="5"> 
+                            <GroupBox.Header>
+                                <Label>指定任务基础信息</Label>
+                            </GroupBox.Header>
+                            <Border  Name="Findtextbox">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="30"/>
+                                        <RowDefinition Height="30"/>
+                                        <RowDefinition Height="30"/>
+                                        <RowDefinition Height="30"/>
+                                        <RowDefinition Height="30"/>
+                                        <RowDefinition Height="30"/>
+                                        <RowDefinition Height="30"/>
+                                        <RowDefinition Height="30"/>
+                                        <RowDefinition Height="30"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="60"/>
+                                        <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="60"/>
+                                        <ColumnDefinition Width="170"/>
+                                        <ColumnDefinition Width="40"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Row="0" Content="任务编号"></Label>
+                                    <Label Grid.Row="1" Content="任务代号"></Label>
+                                    <Label Grid.Row="2" Content="任务名称"></Label>
+                                    <Label Grid.Row="3" Content="任务类型"></Label>
+                                    <Label Grid.Row="4" Content="检查目的"></Label>
+
+                                    <Label Grid.Row="0"  Grid.Column="2" Content="检查人员"></Label>
+                                    <Label Grid.Row="1"  Grid.Column="2" Content="受检单位"></Label>
+                                    <Label Grid.Row="2"  Grid.Column="2" Content="检查地点"></Label>
+                                    <Label Grid.Row="3"  Grid.Column="2" Content="检查对象"></Label>
+                                    <Label Grid.Row="4"  Grid.Column="2" Content="开始日期"></Label>
+                                    <Label Grid.Row="5"  Grid.Column="2" Content="开始时间"></Label>
+                                    <Label Grid.Row="6"  Grid.Column="2" Content="结束日期"></Label>
+                                    <Label Grid.Row="7"  Grid.Column="2" Content="结束时间"></Label>
+
+
+                                    <TextBox   Grid.Row="0"  Grid.Column="1"  Height="25" Text="2017051512001" IsEnabled="False"></TextBox>
+                                    <TextBox   Grid.Row="1"  Grid.Column="1" Height="25"></TextBox>
+                                    <TextBox   Grid.Row="2"  Grid.Column="1" Height="25"></TextBox>
+                                    <ComboBox   Grid.Row="3"  Grid.Column="1"  Height="25">
+                                        <ComboBoxItem    Content="临检"  />
+                                        <ComboBoxItem   Content="驻留" />
+                                        <ComboBoxItem    Content="协同"/>
+                                    </ComboBox>
+                                    <TextBox   Grid.Row="4"  Grid.Column="1"  Grid.RowSpan="4"></TextBox>
+
+                                    <TextBox  Name="tb_choose_User" Grid.Row="0"  Grid.Column="3" Height="25" ></TextBox>
+                                    <ComboBox   Grid.Row="1"  Grid.Column="3"  Height="25" >
+                                        <ComboBoxItem    Content="中国电信"  />
+                                        <ComboBoxItem   Content="中国移动" />
+                                        <ComboBoxItem    Content="中国联通"/>
+                                    </ComboBox>
+                                    <TextBox   Name="tb_choose_place" Grid.Row="2"  Grid.Column="3"  Height="25"></TextBox>
+                                    <TextBox   Grid.Row="3"  Grid.Column="3"  Height="25"></TextBox>
+                                    <DatePicker   Grid.Row="4"  Grid.Column="3" Height="25"></DatePicker>
+                                    <TextBox   Grid.Row="5"  Grid.Column="3"  Height="25"></TextBox>
+                                    <DatePicker   Grid.Row="6"  Grid.Column="3"  Height="25"></DatePicker>
+                                    <TextBox   Grid.Row="7"  Grid.Column="3"  Height="25"></TextBox>
+
+                                    <Button   Content="+"   Grid.Row="0" Grid.Column="4" Width="30" Click="AddContent" Tag="检查人员"></Button>
+                                    <Button  Content="+"   Grid.Row="2" Grid.Column="4" Width="30" Click="AddContent" Tag="检查地点"></Button>
+                                    <Button Content="+"   Grid.Row="3" Grid.Column="4" Width="30" Click="AddContent" Tag="检查对象"></Button>
+                                </Grid>
+                            </Border>
+                        </GroupBox>
+
+                        <GroupBox Grid.Row="1" BorderBrush="#666666" BorderThickness="2" Background="#222125" Style="{StaticResource GroupboxWithoutWhiteBorder}" Margin="5">
+                            <GroupBox.Header>
+                                <Label>指定任务内容、检查手段、执行人员信息</Label>
+                            </GroupBox.Header>
+                            <Border>
+                                <DataGrid   Grid.Column="1" Grid.ColumnSpan="5" Grid.Row="3"   Background="#222125" BorderBrush="#666666"  RowBackground="#1c1c1d" RowHeaderWidth="0" 
+                  HorizontalGridLinesBrush="#303037" VerticalGridLinesBrush="#303037" HorizontalContentAlignment="Center"  
+                  >
+                                    <DataGrid.ColumnHeaderStyle>
+                                        <Style TargetType="DataGridColumnHeader">
+                                            <Setter Property="Background" Value="#464749"/>
+                                            <Setter Property="Foreground" Value="#ffffff"/>
+                                            <Setter Property="FontSize" Value="12" />
+                                            <Setter Property="Height" Value="20" />
+                                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                        </Style>
+                                    </DataGrid.ColumnHeaderStyle>
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="检查地点" Width="*" />
+                                        <DataGridTextColumn  Header="检查对象" Width="*"/>
+
+                                        <DataGridTemplateColumn Header="检查内容"  Width="70">
+                                            <DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                                        <Button  Content="编辑" Width="40"  Background="#303033" Click="AddContent"  Tag="检查内容"/>
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </DataGridTemplateColumn.CellTemplate>
+                                        </DataGridTemplateColumn>
+                                        <DataGridTemplateColumn Header="检查手段"  Width="70">
+                                            <DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                                        <Button  Content="编辑" Width="40"  Background="#303033" Click="AddContent"  Tag="检查手段"/>
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </DataGridTemplateColumn.CellTemplate>
+                                        </DataGridTemplateColumn>
+                                        <DataGridTemplateColumn Header="执行人员"  Width="70">
+                                            <DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                                        <Button  Content="编辑" Width="40"  Background="#303033" Click="AddContent"  Tag="执行人员"/>
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </DataGridTemplateColumn.CellTemplate>
+                                        </DataGridTemplateColumn>
+                                    </DataGrid.Columns>
+                                    <ListBoxItem/>
+                                    <ListBoxItem/>
+
+                                </DataGrid>
+                            </Border>
+                        </GroupBox>
+                      
+
+                        <Border Grid.Row="2">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                <Button Content="确定" Width="80" Margin="5" Click="Button_Click"></Button>
+                                <Button Content="取消" Width="80" Margin="5"></Button>
+                            </StackPanel>
+                        </Border>
+                        
+                    </Grid>
+
+                </Border>
+                <Border Background="#2d2c31" Grid.Column="1" Name="chooseuserfather"  BorderBrush="#2279d6"  BorderThickness="1" Margin="2,0,0,0"  Visibility="Collapsed">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="35"/>
+                        </Grid.RowDefinitions>
+                    <Border   Name="chooseuser" ></Border>
+                        <Button Grid.Row="1" Width="70" Content="确定" HorizontalAlignment="Right" Margin="5" Click="Button_Click_1"></Button>
+                    </Grid>
+                </Border>
+            </Grid>
+
+        </Border>
+
+    </Grid>
+</Window>

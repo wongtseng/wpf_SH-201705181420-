@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using wpf_SH.Task;
 
 namespace wpf_SH
 {
@@ -29,9 +30,10 @@ namespace wpf_SH
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            addTask add_task = new addTask();
-            add_task.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-            add_task.ShowDialog();
+            
+            AddTask addtask = new AddTask();
+            addtask.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            addtask.ShowDialog();
 
         }
 

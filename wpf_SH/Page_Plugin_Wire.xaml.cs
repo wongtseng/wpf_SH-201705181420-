@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using wpf_SH.CableCheck;
 namespace wpf_SH
 {
     /// <summary>
@@ -23,6 +23,13 @@ namespace wpf_SH
         Page_task page_rwgh;
         rwzx page_rwzx;
         uc_pluginbtn[] plugins;
+        Page_PowerLine powerline;
+        Page_CCTV cctv;
+        Page_CircleCheck circle;
+        Page_CircleCheckResult circleresult;
+
+
+
 
         public Page_Plugin_Wire()
         {
@@ -48,50 +55,50 @@ namespace wpf_SH
             switch (thisone.p_type)
             {
                 case "电力线":
-                    if (page_rwgh == null)
+                    if (powerline == null)
                     {
-                        page_rwgh = new Page_task();
+                        powerline = new  Page_PowerLine();
                     }
 
                     MyContentControl.Content = new Frame()
                     {
-                        Content = page_rwgh
+                        Content = powerline
 
                     };
                     break;
 
                 case "闭路电视":
-                    if (page_rwzx == null)
+                    if (cctv == null)
                     {
-                        page_rwzx = new rwzx();
+                        cctv = new  Page_CCTV();
                     }
                     MyContentControl.Content = new Frame()
                     {
-                        Content = page_rwzx
+                        Content = cctv
 
                     };
                     break;
 
                 case "线缆分析":
-                    if (page_rwzx == null)
+                    if (circle == null)
                     {
-                        page_rwzx = new rwzx();
+                        circle = new  Page_CircleCheck();
                     }
                     MyContentControl.Content = new Frame()
                     {
-                        Content = page_rwzx
+                        Content = circle
 
                     };
                     break;
 
-                case "缆分析_结果呈现":
-                    if (page_rwzx == null)
+                case "线缆分析_结果呈现":
+                    if (circleresult == null)
                     {
-                        page_rwzx = new rwzx();
+                        circleresult = new  Page_CircleCheckResult();
                     }
                     MyContentControl.Content = new Frame()
                     {
-                        Content = page_rwzx
+                        Content = circleresult
 
                     };
                     break;

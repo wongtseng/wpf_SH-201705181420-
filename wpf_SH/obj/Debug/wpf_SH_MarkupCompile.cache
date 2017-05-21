@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\wangzhen\Desktop\wpf_SH[201705181420]\wpf_SH\obj\Debug\
+C:\Users\wangzhen\Desktop\wpf_SH[201705201420]\wpf_SH\obj\Debug\
 wpf_SH
 none
 false
 DEBUG;TRACE
-C:\Users\wangzhen\Desktop\wpf_SH[201705181420]\wpf_SH\App.xaml
-61908272588
+C:\Users\wangzhen\Desktop\wpf_SH[201705201420]\wpf_SH\App.xaml
+712021759285
 1632706258
-642104468536
-24353313390
-addDevice.xaml;addlocal.xaml;addplace.xaml;addTask.xaml;adduser.xaml;alert.xaml;choose.xaml;CommonTreeView.xaml;DataRecall\vidoecontrol.xaml;evaluate\Page_Eval.xaml;evaluate\Page_Eval_Master.xaml;evaluate\Page_Report.xaml;Login.xaml;MainWindow.xaml;Page1.xaml;DataRecall\Page_Audio_Recall.xaml;DataRecall\Page_Data_Recall.xaml;Page_device.xaml;page_device_all.xaml;DataRecall\Page_Image_recall.xaml;page_local_all.xaml;page_place.xaml;Page_plugin_Data.xaml;Page_Plugin_DataManage.xaml;DataRecall\Page_Plugin_DataRecall.xaml;Page_Plugin_OffLine.xaml;DataRecall\Page_Plugin_SignalAnal.xaml;Page_Plugin_phy.xaml;Page_plugin_task.xaml;Page_Plugin_UCAssessment.xaml;Page_Plugin_Wire.xaml;Page_Plugin_wireless.xaml;DataRecall\Page_SignalAnal.xaml;DataRecall\Page_DataRecall_Master.xaml;DataRecall\Page_Sign_Recall.xaml;Page_temp.xaml;DataRecall\Page_Video_recall.xaml;physicscheck\Page_CheckResultPhy.xaml;physicscheck\Page_checkresulttable.xaml;physicscheck\Page_ImageCheck.xaml;physicscheck\Page_physicschecknode.xaml;sbjk.xaml;page_local.xaml;Page_task.xaml;page_user.xaml;rwgh.xaml;rwzx.xaml;showtask.xaml;Simple Styles.xaml;style.xaml;system.xaml;UcMyRbtn.xaml;UC_choose.xaml;uc_device.xaml;uc_pluginbtn.xaml;wirelesscheck\Page_Freq_Check.xaml;wirelesscheck\Page_SiganlIdentiy.xaml;wirelesscheck\Page_SoundCheck.xaml;wirelesscheck\Page_WirelessCheckResult.xaml;wirelesscheck\Page_Wirelessresulttable.xaml;wirelesscheck\Page_wirelessVideo.xaml;
+74-1819842881
+24712824855
+addDevice.xaml;addlocal.xaml;addplace.xaml;addTask.xaml;adduser.xaml;alert.xaml;CableCheck\Page_CCTV.xaml;CableCheck\Page_CircleCheck.xaml;CableCheck\Page_CircleCheckResult.xaml;CableCheck\Page_PowerLine.xaml;choose.xaml;CommonTreeView.xaml;DataInput\Page_Input_LocalData.xaml;DataInput\Page_Input_ShareData.xaml;DataRecall\vidoecontrol.xaml;evaluate\Page_Eval.xaml;evaluate\Page_Eval_Master.xaml;evaluate\Page_Report.xaml;Login.xaml;MainWindow.xaml;Page1.xaml;DataRecall\Page_Audio_Recall.xaml;DataRecall\Page_Data_Recall.xaml;Page_device.xaml;page_device_all.xaml;DataRecall\Page_Image_recall.xaml;page_local_all.xaml;page_place.xaml;Page_plugin_Data.xaml;Page_Plugin_DataManage.xaml;DataRecall\Page_Plugin_DataRecall.xaml;Page_Plugin_OffLine.xaml;DataRecall\Page_Plugin_SignalAnal.xaml;Page_Plugin_phy.xaml;Page_plugin_task.xaml;Page_Plugin_UCAssessment.xaml;Page_Plugin_Wire.xaml;Page_Plugin_wireless.xaml;DataRecall\Page_SignalAnal.xaml;DataRecall\Page_DataRecall_Master.xaml;DataRecall\Page_Sign_Recall.xaml;Page_temp.xaml;DataRecall\Page_Video_recall.xaml;physicscheck\Page_CheckResultPhy.xaml;physicscheck\Page_checkresulttable.xaml;physicscheck\Page_ImageCheck.xaml;physicscheck\Page_physicschecknode.xaml;sbjk.xaml;page_local.xaml;Page_task.xaml;page_user.xaml;rwgh.xaml;rwzx.xaml;showtask.xaml;Simple Styles.xaml;style.xaml;system.xaml;Task\AddTask.xaml;Task\Page_AddTask.xaml;UcMyRbtn.xaml;UC_choose.xaml;uc_device.xaml;uc_pluginbtn.xaml;UserControls\UC_Select.xaml;wirelesscheck\Page_Freq_Check.xaml;wirelesscheck\Page_SiganlIdentiy.xaml;wirelesscheck\Page_SoundCheck.xaml;wirelesscheck\Page_WirelessCheckResult.xaml;wirelesscheck\Page_Wirelessresulttable.xaml;wirelesscheck\Page_WirelessresulttableTotal.xaml;wirelesscheck\Page_wirelessVideo.xaml;
 
 False
 

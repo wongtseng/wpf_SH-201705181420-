@@ -1,0 +1,149 @@
+﻿<Page x:Class="wpf_SH.DataInput.Page_Input_LocalData"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:wpf_SH.DataInput"
+      mc:Ignorable="d" 
+            Background="#3f3f47"
+    d:DesignHeight="600" d:DesignWidth="900"
+      Title="Page_Input_LocalData">
+
+    <Page.Resources>
+        <ResourceDictionary Source="..\style.xaml"></ResourceDictionary>
+    </Page.Resources>
+    <Grid>
+        <Border Name="All" Background="#2d2c31" Margin="5" BorderBrush="#3f3f47"  BorderThickness="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="300"/>
+                    <RowDefinition Height="250"/>
+                    <RowDefinition Height="20*"/>
+                </Grid.RowDefinitions>
+
+                <Border Name="Up" Grid.Row="0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="450"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="1" Margin="5" Background="#222125" BorderBrush="#666666" BorderThickness="1">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="25"/>
+                                    <RowDefinition Height="70*"/>
+                                    <RowDefinition Height="30*"/>
+                                </Grid.RowDefinitions>
+                                <Label Content="文件预览"></Label>
+                                <WrapPanel Grid.Row="1">
+                                    <Image   Source="../images/pic.png"></Image>
+                                    <Image   Source="../images/pic.png"></Image>
+                                    <Image   Source="../images/pic.png"></Image>
+
+                                </WrapPanel>
+                              
+                                <TextBox Grid.Row="2" Margin="5"></TextBox>
+                            </Grid>
+                        </Border>
+                        <Border Grid.Row="0" Background="#222125" BorderBrush="#666666" BorderThickness="1" Margin="5"  Padding="3">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="290"/>
+                                    <ColumnDefinition Width="70"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                    <RowDefinition Height="30"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Content="检查任务" HorizontalAlignment="Right" VerticalAlignment="Center"></Label>
+                                <Label Grid.Row="1" Content="检查对象" HorizontalAlignment="Right"></Label>
+                                <Label Grid.Row="2" Content="检查手段" HorizontalAlignment="Right"></Label>
+                                <Label Grid.Row="3" Content="数据类型" HorizontalAlignment="Right"></Label>
+                                <Label Grid.Row="4" Content="录入人员" HorizontalAlignment="Right"></Label>
+                                <Label Grid.Row="5" Content="开始时间" HorizontalAlignment="Right"></Label>
+                                <Label Grid.Row="6" Content="结束时间" HorizontalAlignment="Right"></Label>
+                                    <Label Grid.Row="7" Content="数据路径" HorizontalAlignment="Right"></Label>
+                                    <Label Grid.Row="8" Content="检查对象图片" HorizontalAlignment="Right"> </Label>
+
+                                <ComboBox Grid.Row="0" Grid.Column="1" Padding="1" VerticalAlignment="Center"></ComboBox>
+                                <ComboBox Grid.Row="1" Grid.Column="1"  VerticalAlignment="Center"></ComboBox>
+                                <ComboBox Grid.Row="2" Grid.Column="1"  VerticalAlignment="Center" ></ComboBox>
+                                <ComboBox Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" ></ComboBox>
+                                <ComboBox Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" ></ComboBox>
+                                <DatePicker Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" ></DatePicker>
+                                <DatePicker Grid.Row="6" Grid.Column="1" VerticalAlignment="Center" ></DatePicker>
+                                <TextBox Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" Height="20"></TextBox>
+                                <TextBox Grid.Row="8" Grid.Column="1" VerticalAlignment="Center" Height="20" ></TextBox>
+                                <Button Grid.Row="0" Grid.Column="2"  Content="选择" Margin="5,0,5,0"   HorizontalAlignment="Center" Width="50" Height="20"></Button>
+                                <Button Grid.Row="7" Grid.Column="2" Content="浏览" Margin="5,0,5,0"  HorizontalAlignment="Center" Width="50" Height="20"></Button>
+                                <Button Grid.Row="8" Grid.Column="2"  Content="浏览" Margin="5,0,5,0" HorizontalAlignment="Center" Width="50" Height="20" ></Button>
+                            </Grid>
+                        </Border>
+
+                    </Grid>
+
+
+
+                </Border>
+                <Border Name="Mid" Grid.Row="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="80*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <DataGrid Name="dg_user" Grid.Row="0"  Grid.Column="1"  Background="#222125" BorderBrush="#666666"  RowBackground="#1c1c1d" RowHeaderWidth="0" 
+                  HorizontalGridLinesBrush="#303037" VerticalGridLinesBrush="#303037" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="5"   
+                  >
+                            <DataGrid.ColumnHeaderStyle>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="Background" Value="#464749"/>
+                                    <Setter Property="Foreground" Value="#ffffff"/>
+                                    <Setter Property="FontSize" Value="12" />
+                                    <Setter Property="Height" Value="20" />
+                                    <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                </Style>
+                            </DataGrid.ColumnHeaderStyle>
+                            <DataGrid.Columns>
+                                <DataGridCheckBoxColumn/>
+                                <DataGridTextColumn Header="序号" />
+                                <DataGridTextColumn Header="文件名" Width="100"/>
+                                <DataGridTextColumn Header="大小" Width="80"/>
+                                <DataGridTextColumn  Header="最后修改时间" Width="150"/>
+                                <DataGridTextColumn  Header="备注" Width="*"/>
+                                <DataGridTextColumn  Header="提交状态" Width="50"/>
+                                <DataGridTextColumn Header="文件路径" Width="*"/>
+                             
+                            </DataGrid.Columns>
+                            <ListBoxItem/>
+                            <ListBoxItem/>
+                            <ListBoxItem/>
+                            <ListBoxItem/>
+                            <ListBoxItem/>
+                            <ListBoxItem/>
+                            <ListBoxItem/>
+                        </DataGrid>
+
+                        <StackPanel  Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                            <Button   Content="提交当前文件" Margin="5,0,5,0"  HorizontalAlignment="Center" Width="100" Height="20"></Button>
+                            <Button   Content="提交当前文件" Margin="5,0,5,0"  HorizontalAlignment="Center" Width="100" Height="20"></Button>
+                        </StackPanel>
+
+                    </Grid>
+
+                </Border>
+                <Border Name="Down" Grid.Row="2" Margin="5">
+                    <TextBox  Text="导入信息"></TextBox>
+                </Border>
+            </Grid>
+        </Border>
+
+    </Grid>
+</Page>

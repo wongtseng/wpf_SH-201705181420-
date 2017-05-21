@@ -8,3 +8,13 @@ C:\Users\wangzhen\Desktop\wpf_SH[201705181420]\WindowsFormsControlLibrary\obj\De
 C:\Users\wangzhen\Desktop\wpf_SH[201705181420]\WindowsFormsControlLibrary\obj\Debug\WindowsFormsControlLibrary.csproj.GenerateResource.Cache
 C:\Users\wangzhen\Desktop\wpf_SH[201705181420]\WindowsFormsControlLibrary\obj\Debug\WindowsFormsControlLibrary.dll
 C:\Users\wangzhen\Desktop\wpf_SH[201705181420]\WindowsFormsControlLibrary\obj\Debug\WindowsFormsControlLibrary.pdb
+C:\Users\wangzhen\Desktop\wpf_SH[201705201420]\WindowsFormsControlLibrary\bin\Debug\WindowsFormsControlLibrary.dll
+C:\Users\wangzhen\Desktop\wpf_SH[201705201420]\WindowsFormsControlLibrary\bin\Debug\WindowsFormsControlLibrary.pdb
+C:\Users\wangzhen\Desktop\wpf_SH[201705201420]\WindowsFormsControlLibrary\bin\Debug\Mitov.BasicLab.dll
+C:\Users\wangzhen\Desktop\wpf_SH[201705201420]\WindowsFormsControlLibrary\bin\Debug\Mitov.PlotLabBasic.dll
+C:\Users\wangzhen\Desktop\wpf_SH[201705201420]\WindowsFormsControlLibrary\obj\Debug\WindowsFormsControlLibrary.csprojResolveAssemblyReference.cache
+C:\Users\wangzhen\Desktop\wpf_SH[201705201420]\WindowsFormsControlLibrary\obj\Debug\WindowsFormsControlLibrary.UC_Scope.resources
+C:\Users\wangzhen\Desktop\wpf_SH[201705201420]\WindowsFormsControlLibrary\obj\Debug\WindowsFormsControlLibrary.UC_waterfall.resources
+C:\Users\wangzhen\Desktop\wpf_SH[201705201420]\WindowsFormsControlLibrary\obj\Debug\WindowsFormsControlLibrary.csproj.GenerateResource.Cache
+C:\Users\wangzhen\Desktop\wpf_SH[201705201420]\WindowsFormsControlLibrary\obj\Debug\WindowsFormsControlLibrary.dll
+C:\Users\wangzhen\Desktop\wpf_SH[201705201420]\WindowsFormsControlLibrary\obj\Debug\WindowsFormsControlLibrary.pdb

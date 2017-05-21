@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using wpf_SH.DataInput;
 
 namespace wpf_SH
 {
@@ -23,6 +24,8 @@ namespace wpf_SH
         Page_task page_rwgh;
         rwzx page_rwzx;
         uc_pluginbtn[] plugins;
+        Page_Input_LocalData inputlocal;
+        Page_Input_ShareData sharedate;
 
         public Page_plugin_Data()
         {
@@ -47,27 +50,27 @@ namespace wpf_SH
 
             switch (thisone.p_type)
             {
-                case "任务配置":
-                    if (page_rwgh == null)
+                case "本地数据录入":
+                    if (inputlocal == null)
                     {
-                        page_rwgh = new Page_task();
+                        inputlocal = new  Page_Input_LocalData();
                     }
 
                     MyContentControl.Content = new Frame()
                     {
-                        Content = page_rwgh
+                        Content = inputlocal
 
                     };
                     break;
 
-                case "任务监控":
-                    if (page_rwzx == null)
+                case "协同数据录入":
+                    if (sharedate == null)
                     {
-                        page_rwzx = new rwzx();
+                        sharedate = new  Page_Input_ShareData();
                     }
                     MyContentControl.Content = new Frame()
                     {
-                        Content = page_rwzx
+                        Content = sharedate
 
                     };
                     break;
